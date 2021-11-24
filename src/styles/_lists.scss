@@ -4,6 +4,7 @@ ul.bullets {
   li {
     margin: 0 0 1rem;
     padding-left: 20px;
+    break-inside: avoid-column;
 
     &::before {
       content: '';

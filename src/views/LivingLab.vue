@@ -20,16 +20,23 @@
           <i18n-t tag="h2" keypath="livinglab.title">
             <template #strong><strong>{{ t('livinglab.title_em') }}</strong></template>
           </i18n-t>
-          <p>{{ t('livinglab.description') }}</p>
+          <p>{{ t('livinglab.involve') }}</p>
+          <p>{{ t('livinglab.value') }}</p>
           <ul class="bullets cols-2">
-            <li>Agility in the development of pilots.</li>
-            <li>Innovation friendly regulation.</li>
-            <li>Proximity between key partners.</li>
-            <li>Transversal support from public &amp; private sectors.</li>
+            <li v-for="point in keypoints" :key="point">
+              <i18n-t tag="span" :keypath="`livinglab.keypoints.${point}`">
+                <template #strong>
+                  <strong>{{ t(`livinglab.keypoints.${point}_em`) }}</strong>
+                </template>
+              </i18n-t>
+            </li>
           </ul>
         </div>
-        <div class="column" />
+        <div class="column">
+          <img :src="images.side.path" class="side">
+        </div>
       </div>
+      <hr class="spacer">
       <div class="columns columns--4">
         <article v-for="benefit in benefits" :key="benefit" class="column">
           <h3 class="lined">{{ t(`livinglab.benefits.${benefit}.title`) }}</h3>

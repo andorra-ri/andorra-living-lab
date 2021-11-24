@@ -14,6 +14,11 @@ img.cover {
   &--partial { width: var(--width, 50%); }
 }
 
+img.side {
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
 figure.cover figcaption {
   position: absolute;
   bottom: 0;

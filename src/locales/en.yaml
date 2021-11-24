@@ -14,7 +14,21 @@ navigation:
 livinglab:
   title: Unique environment to {strong}
   title_em: design, create & test
-  description: Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium.
+
+  involve: Living Labs involve all the actors living in the same community through the development and improvement of new products and services, encouraging the adoption of new technologies and in-depth reflections on them.
+  value: Andorra Living Lab connects the opportunities that the country offers and brings it closer to the entrepreneurial ecosystem, promoting talent and the creation of networks that simultaneously encompass social and technological dimensions.
+
+  keypoints:
+    agility: '{strong} in the development of prototypes, pilots & MVPs'
+    agility_em: Agility
+    proximity: '{strong} between key partners and stakeholders'
+    proximity_em: Proximity
+    regulation: Innovation-friendly {strong}
+    regulation_em: regulation
+    support: Transversal {strong} from public & private sectors
+    support_em: support
+    country_scale: Demos and showrooms at a {strong}
+    country_scale_em: country scale
 
   join: Join the Living Lab
   join_call: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantim doloremque laudantium
@@ -23,7 +37,7 @@ livinglab:
   benefits:
     co-creation:
       title: Co-creation
-      description: Make the most of resources, talent and shared efforts.
+      description: Connect and promote sinergies between potential collaborators.
     exploration:
       title: Exploration
       description: Find new applications, products and emerging market opportunities.
@@ -32,7 +46,7 @@ livinglab:
       description: Prototype and test on-site, minimising trial and error times.
     evaluation:
       title: Evaluation
-      description: Obtain results according to objective real criteria.
+      description: Obtain results according to objective real criteria and reduce the time to market.
 
 sectors:
   title: our {strong} sectors
