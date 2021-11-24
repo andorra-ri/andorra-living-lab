@@ -3,6 +3,7 @@
     <img :src="cover" class="cover" draggable="false">
     <navigation />
     <div class="hero">
+      <em>Andorra Living Lab</em>
       <i18n-t tag="h1" keypath="tagline">
         <template #strong><strong>{{ t('tagline_em') }}</strong></template>
       </i18n-t>
@@ -51,6 +52,14 @@ export default {
     padding-bottom: 100px;
 
     h1 { max-width: 34rem; }
+
+    em {
+      text-transform: uppercase;
+      font-family: var(--header-font);
+      margin: 0 1.5rem;
+      letter-spacing: 0.5em;
+      font-weight: bold;
+    }
   }
 }
 </style>
