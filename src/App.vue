@@ -1,12 +1,16 @@
 <template>
-  <div class="wrapper" />
+  <div class="wrapper">
+    <landing />
+  </div>
 </template>
 
 <script>
+import Landing from '/@/views/Landing.vue';
+
 export default {
   name: 'App',
-  setup() {
-    return {};
+  components: {
+    Landing,
   },
 };
 </script>

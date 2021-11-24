@@ -1,2 +1,13 @@
 title: Andorra Living Lab
+tagline: Develop ideas at a {strong}
+tagline_em: country scale
+
+button:
+  learn_more: Learn more
+  contact_us: Contact us
+
+navigation:
+  home: Home
+  case_studies: Case Studies
+  contact: Contact
 
