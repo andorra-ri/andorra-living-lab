@@ -12,5 +12,18 @@ navigation:
 landing:
   cover: https://media.istockphoto.com/photos/team-of-computer-engineers-lean-on-the-desk-and-choose-printed-to-picture-id968289874?k=20&m=968289874&s=612x612&w=0&h=mFxAEFSFOzyBm-8NJir8f7fk3Y5M6G79uQWnT0u39oM=
 
+livinglab:
+  images:
+    thumbnail:
+      path: https://media.istockphoto.com/photos/team-of-computer-engineers-lean-on-the-desk-and-choose-printed-to-picture-id968289874?k=20&m=968289874&s=612x612&w=0&h=mFxAEFSFOzyBm-8NJir8f7fk3Y5M6G79uQWnT0u39oM=
+      caption: photo by Whoever in Wherever
+  join:
+    url: mailto:livinglag@ari.ad
+  benefits:
+    - co-creation
+    - exploration
+    - experimentation
+    - evaluation
+
 api:
   base: appVfnAvub5J7YzZl

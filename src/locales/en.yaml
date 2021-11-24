@@ -11,3 +11,26 @@ navigation:
   case_studies: Case Studies
   contact: Contact
 
+livinglab:
+  title: Unique environment to {strong}
+  title_em: design, create & test
+  description: Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium.
+
+  join: Join the Living Lab
+  join_call: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantim doloremque laudantium
+  join_now: Join now
+
+  benefits:
+    co-creation:
+      title: Co-creation
+      description: Make the most of resources, talent and shared efforts.
+    exploration:
+      title: Exploration
+      description: Find new applications, products and emerging market opportunities.
+    experimentation:
+      title: Experimentation
+      description: Prototype and test on-site, minimising trial and error times.
+    evaluation:
+      title: Evaluation
+      description: Obtain results according to objective real criteria.
+
