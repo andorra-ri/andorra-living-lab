@@ -2,6 +2,11 @@ title: Andorra Living Lab
 tagline: Develop ideas at a {strong}
 tagline_em: country scale
 
+contact: Contact
+contact_phone: Phone
+contact_email: Email
+follow_us: Follow us on {name}
+
 button:
   learn_more: Learn more
   contact_us: Contact us
@@ -67,3 +72,7 @@ projects:
 testimonials:
   title: What {strong}
   title_em: people say
+
+footer:
+  last_will: Andorra Living Lab is promoted by Andorra Research + Innovation. Follow us on social networks and share your experience with the hashtag {hashtag}.
+  copyright_all_rights: All rights reserved

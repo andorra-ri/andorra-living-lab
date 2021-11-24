@@ -5,6 +5,7 @@
     <strategic-sectors />
     <case-studies />
     <testimonials />
+    <page-footer />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import LivingLab from '/@/views/LivingLab.vue';
 import StrategicSectors from '/@/views/StrategicSectors.vue';
 import CaseStudies from '/@/views/CaseStudies.vue';
 import Testimonials from '/@/views/Testimonials.vue';
+import PageFooter from '/@/views/PageFooter.vue';
 
 export default {
   name: 'App',
@@ -23,6 +25,7 @@ export default {
     StrategicSectors,
     CaseStudies,
     Testimonials,
+    PageFooter,
   },
 };
 </script>

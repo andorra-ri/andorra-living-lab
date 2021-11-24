@@ -2,7 +2,15 @@ locales:
   - ca
   - en
 
-contact: livinglab@ari.ad
+contact:
+  email: livinglab@ari.ad
+  phone: +376 862 555
+  social:
+    facebook: https://www.facebook.com/AndorraRecercaInnovacio
+    twitter: https://twitter.com/Andorra_RI
+    instagram: https://www.instagram.com/andorra_ri
+    youtube: https://www.youtube.com/channel/UC_sgrb5DXkWphnjcW1YThzg
+    linkedin: https://www.linkedin.com/company/andorra-recerca-i-innovaci%C3%B3/
 
 navigation:
   home: landing

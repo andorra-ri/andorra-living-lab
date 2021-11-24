@@ -33,3 +33,9 @@ ul.logos {
 
 ul.cols-2 { columns: 2; }
 ul.cols-3 { columns: 3; }
+
+ul.social {
+  margin: 1rem;
+  display: flex;
+  gap: 0.75rem;
+}
