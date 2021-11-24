@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="container">
-      <span id="logo">Andorra <strong>Living Lab</strong></span>
+      <img :src="`images/logo_white_${currentLocale}.png`" class="logo">
       <ul class="main-nav">
         <li v-for="(anchor, name) in navigation" :key="name">
           <a :href="`#${anchor}`">{{ t(`navigation.${name}`) }}</a>

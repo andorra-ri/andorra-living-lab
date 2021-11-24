@@ -37,10 +37,11 @@ export default {
   flex-direction: column;
 
   .cover {
-    left: calc(50% - 160px);
-    width: calc(50% + 160px);
+    left: calc(50% - 11rem);
+    width: calc(50% + 11rem);
     // Fade
     mask-image: linear-gradient(to right, transparent 0%, black 25%) !important;
+
     // Monotone
     mix-blend-mode: screen;
     filter: grayscale(50%) contrast(150%) brightness(0.5);

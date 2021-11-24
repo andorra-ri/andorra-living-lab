@@ -11,7 +11,7 @@ nav {
     display: inline-flex;
     text-align: center;
     margin-left: auto;
-    padding: 2.5rem 0;
+    padding: 2rem 0;
 
     a {
       display: block;
@@ -37,14 +37,5 @@ nav {
     }
 
     li + li a { border-left: 1px solid #fff8; }
-  }
-}
-
-#logo {
-  font-size: 1.75rem;
-
-  strong {
-    font-family: var(--header-font);
-    font-weight: bold;
   }
 }
