@@ -7,7 +7,11 @@
           <figcaption v-if="images.thumbnail.caption">{{ images.thumbnail.caption }}</figcaption>
         </figure>
       </div>
-      <div class="column box" />
+      <div class="column box">
+        <i18n-t tag="div" keypath="livinglab.open_innovation" class="slogan">
+          <template #em><em>{{ t('livinglab.open_innovation_em') }}</em></template>
+        </i18n-t>
+      </div>
       <div class="column box secondary">
         <h4>{{ t('livinglab.join') }}</h4>
         <p>{{ t('livinglab.join_call') }}</p>

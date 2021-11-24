@@ -35,6 +35,9 @@ livinglab:
     country_scale: Demos and showrooms at a {strong}
     country_scale_em: country scale
 
+  open_innovation: Driving {em} innovation
+  open_innovation_em: open
+
   join: Join the Living Lab
   join_call: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantim doloremque laudantium
   join_now: Join now
