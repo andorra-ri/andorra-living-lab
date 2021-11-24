@@ -2,10 +2,9 @@
   <section id="testimonials" class="section">
     <div class="container columns columns--2">
       <div class="column">
-        <img
-          :src="cover"
-          class="cover cover--partial"
-          style="--width:60%">
+        <figure class="cover cover--partial secondary" style="--width:60%">
+          <img :src="cover" class="shaded">
+        </figure>
       </div>
       <div class="column testimonials">
         <i18n-t tag="h2" keypath="testimonials.title">

@@ -14,6 +14,11 @@ img.cover {
   &--partial { width: var(--width, 50%); }
 }
 
+img.shaded {
+  mix-blend-mode: screen;
+  filter: grayscale(50%) contrast(150%) brightness(0.5);
+}
+
 img.side {
   padding: 3rem;
   box-sizing: border-box;
