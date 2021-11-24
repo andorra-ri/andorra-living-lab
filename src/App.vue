@@ -4,6 +4,7 @@
     <living-lab />
     <strategic-sectors />
     <case-studies />
+    <testimonials />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Landing from '/@/views/Landing.vue';
 import LivingLab from '/@/views/LivingLab.vue';
 import StrategicSectors from '/@/views/StrategicSectors.vue';
 import CaseStudies from '/@/views/CaseStudies.vue';
+import Testimonials from '/@/views/Testimonials.vue';
 
 export default {
   name: 'App',
@@ -20,6 +22,7 @@ export default {
     LivingLab,
     StrategicSectors,
     CaseStudies,
+    Testimonials,
   },
 };
 </script>

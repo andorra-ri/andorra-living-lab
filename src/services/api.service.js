@@ -27,3 +27,8 @@ export const getPartners = async () => {
   const { endpoint, ...options } = resources.PARTNERS;
   return airtable.select(endpoint, options);
 };
+
+export const getTestimonials = async () => {
+  const { endpoint, ...options } = resources.TESTIMONIALS;
+  return airtable.select(endpoint, localize(options));
+};

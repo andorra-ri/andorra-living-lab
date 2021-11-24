@@ -50,3 +50,6 @@ projects:
   description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantim doloremque
   more: Learn more
 
+testimonials:
+  title: What {strong}
+  title_em: people speak
