@@ -17,3 +17,13 @@ const localize = options => {
   ));
   return { ...rest, fields };
 };
+
+export const getProjects = async () => {
+  const { endpoint, ...options } = resources.PROJECTS;
+  return airtable.select(endpoint, localize(options));
+};
+
+export const getPartners = async () => {
+  const { endpoint, ...options } = resources.PARTNERS;
+  return airtable.select(endpoint, options);
+};

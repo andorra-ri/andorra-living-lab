@@ -37,3 +37,34 @@ sectors:
 
 api:
   base: appVfnAvub5J7YzZl
+  resources:
+    PROJECTS:
+      endpoint: projects
+      localized:
+        - name
+        - abstract
+      fields:
+        - name
+        - cover
+        - abstract
+        - area
+      sort:
+        order: asc
+        id: desc
+      where:
+        constraints: 1
+        active:
+          checked: true
+
+    PARTNERS:
+      endpoint: partners
+      fields:
+        - name
+        - web
+        - logo
+      sort:
+        order: asc
+      where:
+        constraints: 1
+        active:
+          checked: true

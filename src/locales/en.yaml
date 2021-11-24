@@ -43,3 +43,10 @@ sectors:
   sport: Sport & Wellness
   sustainability: Sustainability
   education: Education
+
+projects:
+  title: Our {strong}
+  title_em: case studies
+  description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantim doloremque
+  more: Learn more
+
