@@ -1,0 +1,50 @@
+nav {
+  border-bottom: 1px solid #fff3;
+  z-index: 2;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: inline-flex;
+    text-align: center;
+    margin-left: auto;
+    padding: 2.5rem 0;
+
+    a {
+      display: block;
+      font-family: var(--header-font);
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 2px;
+      padding: 0 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  .locales-nav {
+    @extend .main-nav;
+    margin-left: 2rem;
+
+    a {
+      font-weight: 300;
+      padding: 0 0.75rem;
+
+      &.active { font-weight: 700; }
+    }
+
+    li + li a { border-left: 1px solid #fff8; }
+  }
+}
+
+#logo {
+  font-size: 1.75rem;
+
+  strong {
+    font-family: var(--header-font);
+    font-weight: bold;
+  }
+}

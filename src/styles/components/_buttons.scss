@@ -1,0 +1,53 @@
+a.button,
+button {
+  font: vaR(--button-font);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: var(--button-padding);
+  margin: 3px 0;
+  border: none;
+  background: var(--button-color);
+  color: #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: inline-block;
+
+  & + & { margin-left: 0.5rem; }
+
+  .primary &,
+  .secondary & {
+    --button-color: #fff;
+    color: var(--color-secondary);
+  }
+
+  &.primary {
+    --button-color: var(--color-primary);
+    color: #fff;
+  }
+
+  &.secondary {
+    --button-color: var(--color-secondary);
+    color: #fff;
+  }
+
+  /* VARIANTS */
+  &.ghost {
+    color: var(--button-color);
+    background: transparent;
+    box-shadow: inset 0 0 0 2px currentColor;
+  }
+
+  &.flat {
+    color: var(--button-color);
+    background: transparent;
+  }
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
+  /* STATE */
+  &:hover { transform: scale(1.05); }
+}

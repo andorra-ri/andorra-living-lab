@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&family=Work+Sans:wght@300;500&display=swap');
+
+:root {
+  font-size: 16px;
+
+  --color-primary: #4b71b4;
+  --color-secondary: #1e2742;
+  --color-light: #f6f9fe;
+
+  --background-color: #fff;
+  --text-font: 'Work Sans', sans-serif;
+  --text-size: 1rem;
+  --text-color: #868999;
+  --header-font: 'Roboto Condensed', sans-serif;
+  --header-color: var(--color-secondary);
+
+  --color-border: #e0ecff;
+
+  --button-color: var(--color-primary);
+  --button-font: 0.75rem var(--header-font);
+  --button-padding: 1rem 2rem;;
+}

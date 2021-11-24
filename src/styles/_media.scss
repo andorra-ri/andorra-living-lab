@@ -1,0 +1,39 @@
+img { max-width: 100%; }
+
+figure.cover,
+figure.cover img,
+img.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+
+  &--partial { width: var(--width, 50%); }
+}
+
+figure.cover figcaption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  background: #0004;
+  font-size: 0.5rem;
+  padding: 0.5em 1em;
+}
+
+.logo {
+  max-height: 3rem;
+  max-width: 8rem;
+  object-fit: contain;
+
+  &--small {
+    max-height: 2rem;
+    max-width: 7rem;
+  }
+
+  a > & { filter: brightness(0) opacity(0.25); }
+  a:hover > & { filter: none; }
+}

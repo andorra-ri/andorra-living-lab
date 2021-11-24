@@ -1,0 +1,81 @@
+@import
+  'navigation',
+  'lists';
+
+/* LAYOUT BLOCKS */
+.section {
+  margin: 7rem 0;
+
+  &.primary,
+  &.secondary,
+  &.light {
+    padding: 7rem 0;
+    margin: 0;
+  }
+
+  .stripped + & { margin-top: 0; }
+}
+
+.container {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.hero {
+  @extend .container;
+  width: 100%;
+  margin: auto;
+  z-index: 1;
+  color: #fff;
+}
+
+.box {
+  position: relative;
+  padding: 1.5rem 1rem 1rem;
+  background: #fff;
+}
+
+div.columns {
+  display: flex;
+  flex-wrap: wrap;
+
+  .column {
+    flex: 1 0 auto;
+    box-sizing: border-box;
+  }
+
+  &--2 .column { flex-basis: 512px; }
+  &--3 .column { flex-basis: 341px; }
+  &--4 .column { flex-basis: 256px; }
+}
+
+/* VARIANTS */
+.primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.secondary {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+.light {
+  background-color: var(--color-light);
+}
+
+.stripped {
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, #fff 50%, #fff 100%);
+}
+
+/* HELPERS */
+.center { text-align: center; }
+
+.shifted {
+  --shift: 100px;
+
+  margin-top: calc(-7rem - var(--shift));
+  margin-bottom: 7rem;
+}
