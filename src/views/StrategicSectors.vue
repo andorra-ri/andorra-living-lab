@@ -11,7 +11,7 @@
           <div class="card-content">
             <img v-svg-inline :src="`icons/${sector.title}.svg`" class="icon">
             <h4>{{ t(`sectors.${sector.title}`) }}</h4>
-            <a href="#">{{ t('button.learn_more') }} &rarr;</a>
+            <!--a href="#">{{ t('button.learn_more') }} &rarr;</a-->
           </div>
         </article>
       </div>
