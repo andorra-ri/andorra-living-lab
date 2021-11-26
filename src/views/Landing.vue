@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 #landing {
-  height: 85vh;
+  height: 90vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@ export default {
   .hero {
     padding-bottom: 100px;
 
-    h1 { max-width: 34rem; }
+    h1 { max-width: 47rem; }
 
     em {
       text-transform: uppercase;
