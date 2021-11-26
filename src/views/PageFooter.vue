@@ -5,7 +5,11 @@
         <div class="column">
           <p><img :src="`images/logo_${locale}.png`" class="logo"></p>
           <i18n-t tag="p" keypath="footer.last_will">
-            <template #hashtag><strong>#andorralivinglab</strong></template>
+            <template #hashtag>
+              <a href="https://twitter.com/search?q=%23andorralivinglab&src=typed_query" target="blank">
+                #andorralivinglab
+              </a>
+            </template>
           </i18n-t>
           <ul class="social">
             <li v-for="(url, name) in social" :key="name">
