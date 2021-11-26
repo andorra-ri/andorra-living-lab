@@ -6,7 +6,11 @@
       </i18n-t>
       <p>{{ t('projects.description') }}</p>
     </div>
-    <paginated v-slot="{ item: project }" :items="projects" class="cards">
+    <paginated
+      v-if="projects.length"
+      v-slot="{ item: project }"
+      :items="projects"
+      class="cards">
       <div class="card-box">
         <img :src="project.cover[0].url" class="cover">
         <div class="box secondary">

@@ -1,6 +1,6 @@
 <template>
   <section id="testimonials" class="section">
-    <div class="container columns columns--2">
+    <div v-if="testimonials.length" class="container columns columns--2">
       <div class="column">
         <figure class="cover cover--partial secondary" style="--width:60%">
           <img :src="cover" class="shaded">
