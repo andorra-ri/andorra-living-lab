@@ -11,6 +11,7 @@
     "reset-css": "^5.0.1",
     "vue": "^3.0.5",
     "vue-i18n": "^9.1.9",
+    "vue-router": "^4.0.12",
     "vue-svg-inline-plugin": "^2.2.0"
   },
   "devDependencies": {

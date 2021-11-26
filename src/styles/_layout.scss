@@ -2,6 +2,10 @@
   'navigation',
   'lists';
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* LAYOUT BLOCKS */
 hr.spacer {
   border: 0;

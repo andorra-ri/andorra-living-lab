@@ -1,7 +1,7 @@
 <template>
-  <nav>
+  <nav :data-scroll="scroll.y">
     <div class="container">
-      <img :src="`images/logo_white_${currentLocale}.png`" class="logo">
+      <img v-svg-inline :src="`images/logo_${currentLocale}.svg`" class="logo">
       <ul class="main-nav">
         <li v-for="(anchor, name) in navigation" :key="name">
           <a :href="`#${anchor}`">{{ t(`navigation.${name}`) }}</a>
@@ -19,17 +19,19 @@
       </ul>
     </div>
   </nav>
+  <button v-if="scroll.y" class="scroller" @click="scrollTo(0)">&uarr;</button>
 </template>
 
 <script>
 import { useI18n } from 'vue-i18n';
+import useScroll from '/@/utils/scroll';
 import { locales, navigation } from '/@/config.yaml';
 
 export default {
   name: 'Navigation',
   setup() {
     const { t, locale: currentLocale } = useI18n();
-    return { t, navigation, locales, currentLocale };
+    return { t, navigation, locales, currentLocale, ...useScroll() };
   },
 };
 </script>

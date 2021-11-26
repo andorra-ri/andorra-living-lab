@@ -35,7 +35,7 @@
 import { ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { getProjects } from '/@/services/api.service';
-import StrategicPartners from '/@/views/StrategicPartners.vue';
+import StrategicPartners from './StrategicPartners.vue';
 import Paginated from '/@/components/Paginated.vue';
 
 export default {

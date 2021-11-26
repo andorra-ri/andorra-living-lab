@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns columns--2">
         <div class="column">
-          <p><img :src="`images/logo_${locale}.png`" class="logo"></p>
+          <p><img :src="`images/logo_${locale}.svg`" class="logo"></p>
           <i18n-t tag="p" keypath="footer.last_will">
             <template #hashtag>
               <a href="https://twitter.com/search?q=%23andorralivinglab&src=typed_query" target="blank">
