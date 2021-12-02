@@ -6,10 +6,6 @@
       <i18n-t tag="h1" keypath="tagline">
         <template #strong><strong>{{ t('tagline_em') }}</strong></template>
       </i18n-t>
-      <p>
-        <a href="#living-lab" class="button secondary">{{ t('button.learn_more') }}</a>
-        <a :href="`mailto:${contact.email}`" class="button ghost">{{ t('button.contact_us') }}</a>
-      </p>
     </div>
   </section>
 </template>

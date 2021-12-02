@@ -7,10 +7,6 @@ contact_phone: Phone
 contact_email: Email
 follow_us: Follow us on {name}
 
-button:
-  learn_more: Learn more
-  contact_us: Contact us
-
 navigation:
   home: Home
   case_studies: Case Studies
