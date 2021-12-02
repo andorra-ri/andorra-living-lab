@@ -25,7 +25,7 @@ livinglab:
     side:
       path: images/4_helix.png
     thumbnail:
-      path: https://media.istockphoto.com/photos/team-of-computer-engineers-lean-on-the-desk-and-choose-printed-to-picture-id968289874?k=20&m=968289874&s=612x612&w=0&h=mFxAEFSFOzyBm-8NJir8f7fk3Y5M6G79uQWnT0u39oM=
+      path: /images/project_whiteboard.jpg
   join:
     url: mailto:livinglab@ari.ad
 

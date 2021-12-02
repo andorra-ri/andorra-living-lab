@@ -44,7 +44,7 @@ export default {
   }
 
   .hero {
-    h1 { max-width: 47rem; }
+    h1 { max-width: 56rem; }
 
     em {
       text-transform: uppercase;
