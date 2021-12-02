@@ -23,7 +23,8 @@ landing:
 livinglab:
   images:
     side:
-      path: images/4_helix.png
+      path: https://images.unsplash.com/photo-1609747073474-596e8b94c082
+      caption: Photo by IBolat on Unsplash
     thumbnail:
       path: /images/project_whiteboard.jpg
   join:
@@ -37,8 +38,8 @@ livinglab:
     - support
 
   benefits:
-    - co-creation
     - exploration
+    - co-creation
     - experimentation
     - evaluation
 

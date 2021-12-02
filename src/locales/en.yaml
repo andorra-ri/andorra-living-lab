@@ -13,12 +13,11 @@ navigation:
   contact: Contact
 
 livinglab:
-  title: Unique environment to {strong}
+  title: Unique ecosystem to {strong}
   title_em: design, create & test
 
-  involve: Living Labs involve all the actors living in the same community through the development and improvement of new products and services, encouraging the adoption of new technologies and in-depth reflections on them.
-  value: Andorra Living Lab connects the opportunities that the country offers and brings it closer to the entrepreneurial ecosystem, promoting talent and the creation of networks that simultaneously encompass social and technological dimensions.
-
+  involve: Andorra Living Lab is a space for coordination, research, design and validation of innovation projects that involves all the actors in the same ecosystem allowing the development of new products and services, encouraging the adoption of new technologies and in-depth reflections on them.
+  value: The country offers the opportunity to establish sinergies among the entrepreneurial ecosystem, promoting talent and the creating networks that simultaneously encompass social and technological dimensions.
   keypoints:
     agility: '{strong} in the development of prototypes, pilots & MVPs'
     agility_em: Agility

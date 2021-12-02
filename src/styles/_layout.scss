@@ -32,6 +32,12 @@ hr.spacer {
   z-index: 1;
 }
 
+.spaced {
+  position: relative;
+  margin: 3rem;
+  height: calc(100% - 6rem);
+}
+
 .hero {
   @extend .container;
   width: 100%;

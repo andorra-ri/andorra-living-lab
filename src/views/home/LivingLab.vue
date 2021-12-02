@@ -36,7 +36,12 @@
           </ul>
         </div>
         <div class="column">
-          <img :src="images.side.path" class="side">
+          <div class="spaced">
+            <figure class="cover">
+              <img :src="images.side.path">
+              <figcaption v-if="images.side.caption">{{ images.side.caption }}</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
       <hr class="spacer">
