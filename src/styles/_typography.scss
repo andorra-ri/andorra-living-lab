@@ -19,10 +19,14 @@ h1, h2, h3, h4 {
   .hero & { --header-color: currentColor; }
 
   &.lined::before {
+    counter-increment: section;
     display: block;
-    content: '';
+    content: counter(section);
     width: 3rem;
-    border-top: 3px solid var(--color-primary);
+    font-size: 0.8em;
+    padding-bottom: 0.25em;
+    color: #8886;
+    border-bottom: 3px solid var(--color-primary);
     margin-bottom: 1rem;
   }
 }

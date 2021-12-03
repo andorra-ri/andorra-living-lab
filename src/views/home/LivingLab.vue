@@ -14,7 +14,6 @@
       </div>
       <div class="column box secondary">
         <h4>{{ t('livinglab.join') }}</h4>
-        <p>{{ t('livinglab.join_call') }}</p>
         <p><a :href="join.url" class="button">{{ t('livinglab.join_now') }}</a></p>
       </div>
     </div>
@@ -37,7 +36,12 @@
           </ul>
         </div>
         <div class="column">
-          <img :src="images.side.path" class="side">
+          <div class="spaced">
+            <figure class="cover">
+              <img :src="images.side.path">
+              <figcaption v-if="images.side.caption">{{ images.side.caption }}</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
       <hr class="spacer">

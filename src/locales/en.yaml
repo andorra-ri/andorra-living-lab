@@ -1,5 +1,5 @@
 title: Andorra Living Lab
-tagline: A unique testing ground {strong}
+tagline: A unique testing environment {strong}
 tagline_em: An innovative country
 
 contact: Contact
@@ -7,22 +7,17 @@ contact_phone: Phone
 contact_email: Email
 follow_us: Follow us on {name}
 
-button:
-  learn_more: Learn more
-  contact_us: Contact us
-
 navigation:
   home: Home
   case_studies: Case Studies
   contact: Contact
 
 livinglab:
-  title: Unique environment to {strong}
+  title: Unique ecosystem to {strong}
   title_em: design, create & test
 
-  involve: Living Labs involve all the actors living in the same community through the development and improvement of new products and services, encouraging the adoption of new technologies and in-depth reflections on them.
-  value: Andorra Living Lab connects the opportunities that the country offers and brings it closer to the entrepreneurial ecosystem, promoting talent and the creation of networks that simultaneously encompass social and technological dimensions.
-
+  involve: Andorra Living Lab is a space for coordination, research, design and validation of innovation projects that involves all the actors in the same ecosystem allowing the development of new products and services, encouraging the adoption of new technologies and in-depth reflections on them.
+  value: The country offers the opportunity to establish sinergies among the entrepreneurial ecosystem, promoting talent and the creating networks that simultaneously encompass social and technological dimensions.
   keypoints:
     agility: '{strong} in the development of prototypes, pilots & MVPs'
     agility_em: Agility
@@ -38,8 +33,7 @@ livinglab:
   open_innovation: Driving {em} innovation
   open_innovation_em: open
 
-  join: Join the Living Lab
-  join_call: Connect with the innovation ecosystem of Andorra.
+  join: Connect with the innovation ecosystem of Andorra.
   join_now: Join now
 
   benefits:
@@ -59,10 +53,10 @@ livinglab:
 sectors:
   title: our {strong} sectors
   title_em: strategic
-  description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantim doloremque
+  description: Andorra Living Lab will is to work in line with the National Strategic Plan for the implementation of the 2030 Agenda for Sustainable Development of the United Nations.
 
   mountain: Mountain
-  sport: Sport & Wellness
+  sport_health_wellness: Sport, Health & Wellness
   sustainability: Sustainability
   education: Education
 
