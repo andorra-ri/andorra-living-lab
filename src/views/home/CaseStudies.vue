@@ -12,7 +12,10 @@
       :items="projects"
       class="cards">
       <div class="card-box">
-        <img :src="project.cover[0].url" class="cover">
+        <figure class="cover">
+          <img :src="project.cover[0].url" class="cover">
+          <figcaption>{{ project.cover[0].filename }}</figcaption>
+        </figure>
         <div class="box secondary">
           <p class="tags">
             <span v-for="tag in project.area" :key="tag" class="tag">
