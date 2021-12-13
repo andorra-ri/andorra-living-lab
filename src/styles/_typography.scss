@@ -21,12 +21,13 @@ h1, h2, h3, h4 {
   &.lined::before {
     counter-increment: section;
     display: block;
-    content: counter(section);
+    content: '0' counter(section);
     width: 3rem;
     font-size: 0.8em;
-    padding-bottom: 0.25em;
-    color: #8886;
-    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 1em;
+    color: #ccc;
+    font-family: var(--text-font);
+    border-bottom: 2px solid var(--color-primary);
     margin-bottom: 1rem;
   }
 }
