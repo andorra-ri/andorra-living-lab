@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="columns columns--2">
+      <div class="columns columns--2 spaced">
         <div class="column">
           <i18n-t tag="h2" keypath="livinglab.title">
             <template #strong><strong>{{ t('livinglab.title_em') }}</strong></template>
@@ -36,12 +36,10 @@
           </ul>
         </div>
         <div class="column">
-          <div class="spaced">
-            <figure class="cover">
-              <img :src="images.side.path">
-              <figcaption v-if="images.side.caption">{{ images.side.caption }}</figcaption>
-            </figure>
-          </div>
+          <figure class="cover">
+            <img :src="images.side.path">
+            <figcaption v-if="images.side.caption">{{ images.side.caption }}</figcaption>
+          </figure>
         </div>
       </div>
       <hr class="spacer">

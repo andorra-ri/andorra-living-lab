@@ -9,7 +9,7 @@ html {
 /* LAYOUT BLOCKS */
 hr.spacer {
   border: 0;
-  margin: 2rem;
+  margin: 4rem 0;
 }
 
 .section {
@@ -33,12 +33,6 @@ hr.spacer {
   z-index: 1;
 }
 
-.spaced {
-  position: relative;
-  margin: 3rem;
-  height: calc(100% - 6rem);
-}
-
 .hero {
   @extend .container;
   width: 100%;
@@ -54,17 +48,23 @@ hr.spacer {
 }
 
 div.columns {
+  --gap: 0px;
+
   display: flex;
   flex-wrap: wrap;
+  gap: var(--gap);
 
   .column {
     flex: 1 0 auto;
     box-sizing: border-box;
+    position: relative;
   }
 
-  &--2 .column { flex-basis: 512px; }
-  &--3 .column { flex-basis: 341px; }
-  &--4 .column { flex-basis: 256px; }
+  &--2 .column { flex-basis: calc(512px - var(--gap)); }
+  &--3 .column { flex-basis: calc(341px - var(--gap)); }
+  &--4 .column { flex-basis: calc(256px - var(--gap)); }
+
+  &.spaced { --gap: 2rem; }
 }
 
 /* VARIANTS */
