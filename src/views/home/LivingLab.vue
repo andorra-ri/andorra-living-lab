@@ -27,10 +27,9 @@
           <p>{{ t('livinglab.value') }}</p>
         </div>
         <div class="column">
-          <figure class="cover">
-            <img :src="images.side.path">
-            <figcaption v-if="images.side.caption">{{ images.side.caption }}</figcaption>
-          </figure>
+          <accordion v-slot="{ item }" :items="keypoints" :preview="0">
+            <p>{{ t(`livinglab.keypoints.${item.id}.description`) }}</p>
+          </accordion>
         </div>
       </div>
       <hr class="spacer">
@@ -45,14 +44,23 @@
 </template>
 
 <script>
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
+import Accordion from '/@/components/Accordion.vue';
 import { livinglab } from '/@/config.yaml';
 
 export default {
   name: 'LivingLab',
+  components: { Accordion },
   setup() {
     const { t } = useI18n();
-    return { t, ...livinglab };
+
+    const keypoints = computed(() => livinglab.keypoints.map(point => ({
+      id: point,
+      title: t(`livinglab.keypoints.${point}.title`),
+    })));
+
+    return { t, ...livinglab, keypoints };
   },
 };
 </script>

@@ -19,6 +19,18 @@ livinglab:
   involve: Andorra Living Lab is a space for innovation projects coordination, research, design and validation that involves all actors in the same ecosystem, enabling for development of new products and services, as well as encouraging the adoption of new technologies and in-depth reflections on them.
   value: The country provides the opportunity to create synergies among the entrepreneurial ecosystem, promoting talent and building networks that span both social and technological aspects
   keypoints:
+    proximity:
+      title: Proximity
+      description: Access to decision-makers, privates and relevant scientists fasten the development of pilots and MVPs in a real environment.
+    logistics:
+      title: Logistics
+      description: Logistical support for developing, testing, validating, or demonstrating concepts, products, or services at a national level.
+    cocreation:
+      title: Co-creation
+      description: Open innovation ecosystem to find the finest partners to collaborate within the country's specialization topics. High quantity and quality multisectorial data available for collaborative initiatives.
+    regulation:
+      title: Regulation
+      description: Flexibility in an innovation-friendly regulatory framework to allow for rapid prototype and field testing, as well as rapid adaptability to new technologies and trends.
 
   open_innovation: Driving {em} innovation
   open_innovation_em: open

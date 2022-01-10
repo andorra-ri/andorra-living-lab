@@ -31,11 +31,10 @@ livinglab:
     url: mailto:livinglab@ari.ad
 
   keypoints:
-    - agility
     - proximity
-    - country_scale
+    - logistics
+    - cocreation
     - regulation
-    - support
 
   benefits:
     - exploration
