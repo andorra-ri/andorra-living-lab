@@ -25,15 +25,6 @@
           </i18n-t>
           <p>{{ t('livinglab.involve') }}</p>
           <p>{{ t('livinglab.value') }}</p>
-          <ul class="bullets cols-2">
-            <li v-for="point in keypoints" :key="point">
-              <i18n-t tag="span" :keypath="`livinglab.keypoints.${point}`">
-                <template #strong>
-                  <strong>{{ t(`livinglab.keypoints.${point}_em`) }}</strong>
-                </template>
-              </i18n-t>
-            </li>
-          </ul>
         </div>
         <div class="column">
           <figure class="cover">
