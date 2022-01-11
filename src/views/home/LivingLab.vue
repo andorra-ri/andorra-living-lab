@@ -32,7 +32,9 @@
           </accordion>
         </div>
       </div>
-      <hr class="spacer">
+      <logos-list :logos="partners" />
+    </div>
+    <div class="container">
       <div class="columns columns--4">
         <article v-for="benefit in benefits" :key="benefit" class="column">
           <h3 class="lined">{{ t(`livinglab.benefits.${benefit}.title`) }}</h3>
@@ -44,22 +46,35 @@
 </template>
 
 <script>
+import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { getPartners } from '/@/services/api.service';
 import Accordion from '/@/components/Accordion.vue';
+import LogosList from '/@/components/LogosList.vue';
 import { livinglab } from '/@/config.yaml';
 
 export default {
   name: 'LivingLab',
-  components: { Accordion },
+  components: { Accordion, LogosList },
   setup() {
     const { t } = useI18n();
+    const partners = ref([]);
 
     const keypoints = livinglab.keypoints.map(point => ({
       id: point,
       title: t(`livinglab.keypoints.${point}.title`),
     }));
 
-    return { t, ...livinglab, keypoints };
+    onMounted(async () => {
+      const p = await getPartners();
+      partners.value = p.map(partner => ({
+        name: partner.name,
+        url: partner.web,
+        image: partner.logo[0].url,
+      }));
+    });
+
+    return { t, ...livinglab, keypoints, partners };
   },
 };
 </script>
