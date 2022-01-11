@@ -44,7 +44,6 @@
 </template>
 
 <script>
-import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import Accordion from '/@/components/Accordion.vue';
 import { livinglab } from '/@/config.yaml';
@@ -55,10 +54,10 @@ export default {
   setup() {
     const { t } = useI18n();
 
-    const keypoints = computed(() => livinglab.keypoints.map(point => ({
+    const keypoints = livinglab.keypoints.map(point => ({
       id: point,
       title: t(`livinglab.keypoints.${point}.title`),
-    })));
+    }));
 
     return { t, ...livinglab, keypoints };
   },
