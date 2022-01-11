@@ -24,11 +24,17 @@ h1, h2, h3, h4 {
     content: '0' counter(section);
     width: 3rem;
     font-size: 0.8em;
-    padding-bottom: 1em;
-    color: #ccc;
+    padding-bottom: 0.5em;
+    color: var(--color-primary);
     font-family: var(--text-font);
     border-bottom: 2px solid var(--color-primary);
     margin-bottom: 1rem;
+
+    .primary &,
+    .secondary & {
+      color: #fff;
+      border-color: #fff;
+    }
   }
 }
 

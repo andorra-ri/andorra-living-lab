@@ -41,3 +41,23 @@ figure.cover figcaption {
   a > & { filter: brightness(0) opacity(0.25); }
   a:hover > & { filter: none; }
 }
+
+.video {
+  height: 33rem;
+  margin: 5rem 0;
+
+  .toggler {
+    font-weight: bold;
+    text-align: center;
+    background: #fff;
+    color: var(--color-secondary);
+    height: 6rem;
+    width: 6rem;
+    line-height: 6;
+    border-radius: 50%;
+    text-transform: uppercase;
+    z-index: 10;
+
+    &:hover { box-shadow: 0 0 0 1rem #fff8; }
+  }
+}

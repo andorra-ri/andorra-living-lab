@@ -34,8 +34,9 @@
       </div>
       <logos-list :logos="partners" />
     </div>
-    <div class="container">
-      <div class="columns columns--4">
+    <video-embed :url="video.source" :cover="video.cover" class="video" />
+    <div class="ribbon right shifted" style="--shift:5rem">
+      <div class="container columns columns--4">
         <article v-for="benefit in benefits" :key="benefit" class="column">
           <h3 class="lined">{{ t(`livinglab.benefits.${benefit}.title`) }}</h3>
           <p>{{ t(`livinglab.benefits.${benefit}.description`) }}</p>
@@ -51,11 +52,12 @@ import { useI18n } from 'vue-i18n';
 import { getPartners } from '/@/services/api.service';
 import Accordion from '/@/components/Accordion.vue';
 import LogosList from '/@/components/LogosList.vue';
+import VideoEmbed from '/@/components/VideoEmbed.vue';
 import { livinglab } from '/@/config.yaml';
 
 export default {
   name: 'LivingLab',
-  components: { Accordion, LogosList },
+  components: { Accordion, LogosList, VideoEmbed },
   setup() {
     const { t } = useI18n();
     const partners = ref([]);

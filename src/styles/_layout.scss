@@ -67,6 +67,20 @@ div.columns {
   &.spaced { --gap: 2rem; }
 }
 
+.ribbon {
+  --dir: left;
+
+  position: relative;
+  background: linear-gradient(to var(--dir), transparent, transparent 50%, var(--color-primary) 50%, var(--color-primary));
+
+  &.right { --dir: right; }
+
+  .container {
+    @extend .primary;
+    padding: 1rem 1.5rem;
+  }
+}
+
 /* VARIANTS */
 .primary {
   background-color: var(--color-primary);

@@ -1,0 +1,23 @@
+providers:
+  # https://developers.google.com/youtube/player_parameters?hl=es-419
+  youtube:
+    rel: 0 # Hide related videos
+    fs: 0 # Disable fullscreen
+    controls: 0 # Hide controls
+    showinfo: 0 # Hide video info
+    iv_load_policy: 3 # Disable video annotations
+    modestbranding: 1 # Hide YouTube logo
+    autoplay: 0 # Do not autoplay video on load
+    mute: 0 # Do not mute video
+    loop: 1 # Loop video (prevents displaying related videos)
+    cc_load_policy: 1 # Force subtitles
+
+  # https://vimeo.zendesk.com/hc/en-us/articles/360001494447-Using-Player-Parameters
+  vimeo:
+    autoplay: 0
+    loop: 1
+    autopause: 1
+    title: 0
+    portrait: 0
+    byline: 0
+    muted: 0
