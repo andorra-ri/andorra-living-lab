@@ -24,7 +24,7 @@
           </p>
           <h3>{{ project[`name_${locale}`] }}</h3>
           <p>{{ project[`abstract_${locale}`] }}</p>
-          <!--p><a href="#">{{ t('projects.more') }} &rarr;</a></p-->
+          <p><a :href="`/project/${project.slug}`">{{ t('projects.more') }} &rarr;</a></p>
         </div>
       </div>
     </paginated>

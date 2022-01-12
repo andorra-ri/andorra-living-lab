@@ -65,21 +65,33 @@ api:
   resources:
     PROJECTS:
       endpoint: projects
-      localized:
-        - name
-        - abstract
-      fields:
-        - name
-        - cover
-        - abstract
-        - area
-      sort:
-        order: asc
-        id: desc
-      where:
-        constraints: 1
-        active:
-          checked: true
+      list:
+        localized:
+          - name
+          - abstract
+        fields:
+          - slug
+          - name
+          - cover
+          - abstract
+          - area
+        sort:
+          order: asc
+        where:
+          constraints: 1
+          active:
+            checked: true
+      single:
+        localized:
+          - name
+          - description
+        fields:
+          - name
+          - description
+          - cover
+          - area
+          - url
+          - documents
 
     PARTNERS:
       endpoint: partners

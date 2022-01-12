@@ -9,5 +9,10 @@ export default createRouter({
       name: 'home',
       component: Home,
     },
+    {
+      path: '/project/:slug(.*)?',
+      name: 'news',
+      component: () => import('./views/Project.vue'),
+    },
   ],
 });
