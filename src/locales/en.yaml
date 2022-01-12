@@ -38,6 +38,11 @@ livinglab:
   join: Connect with the innovation ecosystem of Andorra.
   join_now: Join now
 
+  methodology: Rely on {strong} methodologies
+  methodology_em: lead & trusted
+  quad_helix: Andorra Living Lab is governed by the Quadruple Helix model. The key to success is to involve all of the actors that cohabit in the same community and profit from the improvements brought by the new technologies adopted in the ecosystem.
+  methodologies: Follow methodologies used in innovation ecosystems development based on Lean Startup, Agile and Open Innovation Frameworks.
+
   benefits:
     co-creation:
       title: Co-creation

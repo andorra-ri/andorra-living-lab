@@ -65,6 +65,7 @@ div.columns {
   &--4 .column { flex-basis: calc(256px - var(--gap)); }
 
   &.spaced { --gap: 2rem; }
+  &.reversed { flex-direction: row-reverse; }
 }
 
 .ribbon {

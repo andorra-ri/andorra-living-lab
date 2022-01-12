@@ -43,6 +43,21 @@
         </article>
       </div>
     </div>
+    <div class="container columns columns--2 spaced reversed">
+      <div class="column">
+        <i18n-t tag="h2" keypath="livinglab.methodology">
+          <template #strong><strong>{{ t('livinglab.methodology_em') }}</strong></template>
+        </i18n-t>
+        <p>{{ t('livinglab.quad_helix') }}</p>
+        <p>{{ t('livinglab.methodologies') }}</p>
+      </div>
+      <div class="column">
+        <figure class="cover contain">
+          <img :src="images.side.path">
+          <figcaption v-if="images.side.caption">{{ images.side.caption }}</figcaption>
+        </figure>
+      </div>
+    </div>
   </section>
 </template>
 

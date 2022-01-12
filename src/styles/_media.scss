@@ -12,6 +12,8 @@ img.cover {
   z-index: 0;
 
   &--partial { width: var(--width, 50%); }
+
+  &.contain img { object-fit: contain; }
 }
 
 img.shaded {
