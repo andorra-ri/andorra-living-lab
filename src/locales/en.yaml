@@ -74,6 +74,15 @@ projects:
   description: Read our case studies to find out how we have helped our collaborators succeed.
   more: Learn more
 
+  links: Links
+  visit_website: Visit website
+  documents: Documents
+
+  know_more: Want to know more?
+  contact: Contact with us through our representative or submit a inquiry online.
+  contact_us: Contact us
+
+
 testimonials:
   title: What {strong}
   title_em: people say
