@@ -1,7 +1,7 @@
 <template>
   <nav :data-scroll="scroll.y">
     <div class="container">
-      <img v-svg-inline :src="`images/logo_${currentLocale}.svg`" class="logo">
+      <img v-svg-inline :src="`/images/logo_${currentLocale}.svg`" class="logo">
       <ul class="main-nav">
         <li v-for="(anchor, name) in navigation" :key="name">
           <a :href="`#${anchor}`">{{ t(`navigation.${name}`) }}</a>
