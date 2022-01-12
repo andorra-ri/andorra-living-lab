@@ -33,11 +33,17 @@ figure.cover figcaption {
 .logo {
   max-height: 3rem;
   max-width: 8rem;
+  vertical-align: middle;
   object-fit: contain;
 
   &--small {
     max-height: 2rem;
     max-width: 7rem;
+  }
+
+  &--big {
+    max-height: 4rem;
+    max-width: 12rem;
   }
 
   a > & { filter: brightness(0) opacity(0.25); }

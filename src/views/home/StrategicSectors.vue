@@ -4,7 +4,6 @@
       <i18n-t tag="h2" keypath="sectors.title">
         <template #strong><strong>{{ t('sectors.title_em') }}</strong></template>
       </i18n-t>
-      <p>{{ t('sectors.description') }}</p>
       <div class="cards">
         <article v-for="sector in sectors" :key="sector.title" class="card">
           <img :src="sector.cover" class="cover">
@@ -15,6 +14,14 @@
           </div>
         </article>
       </div>
+      <i18n-t tag="p" keypath="sectors.ods" class="note">
+        <template #plan>
+          <a href="https://www.exteriors.ad/ca/ods" target="blank">
+            {{ t('sectors.ods_strategic_plan') }}
+          </a>
+        </template>
+      </i18n-t>
+      <p><img src="/images/onu_sdg.png" class="logo logo--big"></p>
     </div>
   </section>
 </template>

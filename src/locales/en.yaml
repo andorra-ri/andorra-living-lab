@@ -60,7 +60,9 @@ livinglab:
 sectors:
   title: focus on {strong} sectors
   title_em: strategic
-  description: Andorra Living Lab functions in accordance with the National Strategic Plan for the implementation of the United Nations 2030 Agenda for Sustainable Development.
+  ods: Andorra Living Lab functions in accordance with the {plan} for the implementation of the United Nations 2030 Agenda for Sustainable Development.
+  ods_strategic_plan: National Strategic Plan
+
   mountain: Mountain
   sport_health_wellness: Sport, Health & Wellness
   sustainability: Sustainability
