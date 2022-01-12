@@ -58,7 +58,7 @@ livinglab:
       description: Obtain results according to objective real criteria and reduce the time to market.
 
 sectors:
-  title: our {strong} sectors
+  title: focus on {strong} sectors
   title_em: strategic
   description: Andorra Living Lab functions in accordance with the National Strategic Plan for the implementation of the United Nations 2030 Agenda for Sustainable Development.
   mountain: Mountain
@@ -67,7 +67,7 @@ sectors:
   education: Education
 
 projects:
-  title: Our {strong}
+  title: latest {strong}
   title_em: case studies
   description: Read our case studies to find out how we have helped our collaborators succeed.
   more: Learn more
