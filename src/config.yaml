@@ -31,6 +31,7 @@ livinglab:
       path: /images/4_helix_en.png
     thumbnail:
       path: /images/project_whiteboard.jpg
+      caption: Photo by Kvalifik on Unsplash
   join:
     url: mailto:livinglab@ari.ad
 
