@@ -15,6 +15,7 @@ hr.spacer {
 .section {
   margin: 7rem 0;
   counter-reset: section;
+  position: relative;
 
   &.primary,
   &.secondary,
