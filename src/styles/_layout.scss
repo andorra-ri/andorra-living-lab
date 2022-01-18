@@ -87,11 +87,15 @@ div.columns {
 .primary {
   background-color: var(--color-primary);
   color: #fff;
+
+  a:hover { color: #fff; }
 }
 
 .secondary {
   background-color: var(--color-secondary);
   color: #fff;
+
+  a:hover { color: #fff; }
 }
 
 .light {
