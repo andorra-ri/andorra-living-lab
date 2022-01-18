@@ -4,7 +4,7 @@
       <img v-svg-inline :src="`/images/logo_${currentLocale}.svg`" class="logo">
       <ul class="main-nav">
         <li v-for="(anchor, name) in navigation" :key="name">
-          <a :href="`#${anchor}`">{{ t(`navigation.${name}`) }}</a>
+          <router-link :to="anchor">{{ t(`navigation.${name}`) }}</router-link>
         </li>
       </ul>
       <ul class="locales-nav">

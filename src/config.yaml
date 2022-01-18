@@ -13,9 +13,9 @@ contact:
     linkedin: https://www.linkedin.com/company/andorra-recerca-i-innovaci%C3%B3/
 
 navigation:
-  home: landing
-  case_studies: case-studies
-  contact: contact
+  home: /
+  case_studies: /#case-studies
+  contact: '#contact'
 
 landing:
   cover: images/mountains.jpg
