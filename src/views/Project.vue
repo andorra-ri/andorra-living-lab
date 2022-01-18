@@ -40,7 +40,7 @@
 <script>
 import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { Remarkable } from 'remarkable';
 import { getProjects } from '/@/services/api.service';
 import fileIcon from '/@/utils/file-icons';
@@ -50,6 +50,7 @@ export default {
   setup() {
     const { t, locale } = useI18n();
     const { params } = useRoute();
+    const { push } = useRouter();
     const project = ref(undefined);
 
     const md = new Remarkable('full', {
@@ -59,14 +60,18 @@ export default {
     });
 
     onMounted(async () => {
-      const [{
-        [`name_${locale.value}`]: name,
-        [`description_${locale.value}`]: description,
-        documents: docs = [],
-        ...rest
-      }] = await getProjects(params.slug);
-      const documents = docs.map(doc => ({ ...doc, icon: fileIcon(doc.type) }));
-      project.value = { ...rest, name, documents, description: md.render(description) };
+      try {
+        const [{
+          [`name_${locale.value}`]: name,
+          [`description_${locale.value}`]: description,
+          documents: docs = [],
+          ...rest
+        }] = await getProjects(params.slug);
+        const documents = docs.map(doc => ({ ...doc, icon: fileIcon(doc.type) }));
+        project.value = { ...rest, name, documents, description: md.render(description) };
+      } catch (error) {
+        push('/#case-studies');
+      }
     });
 
     return { t, locale, project };
