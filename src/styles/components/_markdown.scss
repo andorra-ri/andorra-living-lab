@@ -50,4 +50,11 @@
   img {
     margin: auto;
   }
+
+  blockquote {
+    margin: 1.5rem 1rem;
+    padding: 1px;
+    background: var(--color-light);
+    border-left: 3px solid var(--color-primary);
+  }
 }
