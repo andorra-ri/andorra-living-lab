@@ -14,6 +14,11 @@ export default createRouter({
       name: 'news',
       component: () => import('./views/Project.vue'),
     },
+    {
+      path: '/challenge/:slug(.*)?',
+      name: 'challenge',
+      component: () => import('./views/Challenge.vue'),
+    },
   ],
   scrollBehavior(to) {
     return to.hash ? {

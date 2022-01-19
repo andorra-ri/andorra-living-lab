@@ -75,6 +75,11 @@ challenges:
   finished: Finished challenge
   more: Learn more
 
+  apply: Apply for this challenge
+  know_more: Want to know more?
+  contact: Contact with us through our representative or submit a inquiry online.
+  contact_us: Contact us
+
 projects:
   title: latest {strong}
   title_em: case studies
