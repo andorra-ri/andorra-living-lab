@@ -57,4 +57,31 @@
     background: var(--color-light);
     border-left: 3px solid var(--color-primary);
   }
+
+  table {
+    width: calc(100% - 2rem);
+    margin: 1.5rem 1rem;
+  }
+  table thead th {
+    font-weight: bold;
+    border: solid 1px var(--color-primary--transparent);
+    padding: 0.75rem;
+    text-align: center;
+  }
+  table tbody td {
+    border: solid 1px var(--color-primary--transparent);
+    padding: 0.75rem;
+  }
+
+  hr.footnotes-sep {
+    margin: 3rem 0 2rem;
+    border: 0;
+    border-top: 1px solid var(--color-primary--transparent);
+  }
+
+  ol.footnotes-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+   }
 }
