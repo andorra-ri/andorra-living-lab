@@ -9,6 +9,7 @@ follow_us: Follow us on {name}
 
 navigation:
   home: Home
+  challenges: Challenges
   case_studies: Case Studies
   contact: Contact
 
@@ -67,6 +68,17 @@ sectors:
   sport_health_wellness: Sport, Health & Wellness
   sustainability: Sustainability
   education: Education
+
+challenges:
+  title: our {strong}
+  title_em: challenges
+  finished: Finished challenge
+  more: Learn more
+
+  apply: Apply for this challenge
+  know_more: Want to know more?
+  contact: Contact with us through our representative or submit a inquiry online.
+  contact_us: Contact us
 
 projects:
   title: latest {strong}

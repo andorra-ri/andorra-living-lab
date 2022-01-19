@@ -39,3 +39,44 @@ ul.social {
   display: flex;
   gap: 0.75rem;
 }
+
+
+ul.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+  li {
+    max-height: 300px;
+    display: flex;
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      flex-direction: row-reverse;
+    }
+
+    img {
+      width: 50%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+
+      &.passed { filter: grayscale(75%) opacity(0.5); }
+    }
+
+    .grid-content {
+      flex: 1;
+      text-align: left;
+      background: #fff;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+
+      em.date {
+        display: block;
+        margin: 1rem;
+        font-size: 0.85rem;
+      }
+
+      h4 { margin: auto 1rem 0; }
+    }
+  }
+}
