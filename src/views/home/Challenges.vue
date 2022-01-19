@@ -1,5 +1,5 @@
 <template>
-  <section v-if="challenges.length" id="challenges" class="section light">
+  <section id="challenges" class="section light">
     <div class="container center">
       <i18n-t tag="h2" keypath="challenges.title">
         <template #strong><strong>{{ t('challenges.title_em') }}</strong></template>
