@@ -19,18 +19,26 @@
             </li>
           </ul>
         </div>
-        <div class="column">
+        <div class="column columns columns--2">
           <div id="contact" class="column">
             <h3>{{ t('contact') }}</h3>
             <address>
               <p>
-                c/ Prat de la Creu 68-76, 3a Planta<br>
-                Edifici Administratiu Comú Andorra la Vella<br>
+                c/ Prat de la Creu 68-76, 3a<br>
+                Edif. Comú Andorra la Vella<br>
                 AD500 - Andorra la Vella
               </p>
             </address>
             <p>{{ t('contact_phone') }}: <a :href="`tel:${phone}`">{{ phone }}</a></p>
             <p>{{ t('contact_email') }}: <a :href="`mailto:${email}`">{{ email }}</a></p>
+          </div>
+          <div class="column">
+            <h3>Useful links</h3>
+            <ul class="links">
+              <li v-for="(link, name) in links" :key="name">
+                <a :href="link" target="blank">{{ t(`footer.links.${name}`) }}</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -44,13 +52,13 @@
 
 <script>
 import { useI18n } from 'vue-i18n';
-import { contact } from '/@/config.yaml';
+import { contact, links } from '/@/config.yaml';
 
 export default {
   name: 'PageFooter',
   setup() {
     const { t, locale } = useI18n();
-    return { t, locale, ...contact };
+    return { t, locale, links, ...contact };
   },
 };
 </script>
