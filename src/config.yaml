@@ -93,6 +93,35 @@ api:
           - url
           - documents
 
+    CHALLENGES:
+      endpoint: challenges
+      list:
+        localized:
+          - name
+        fields:
+          - slug
+          - name
+          - cover
+          - date_start
+          - date_end
+        sort:
+          date_start: desc
+        where:
+          constraints: 1
+          active:
+            checked: true
+      single:
+        localized:
+          - name
+          - description
+        fields:
+          - name
+          - description
+          - cover
+          - link
+          - date_start
+          - date_end
+
     PARTNERS:
       endpoint: partners
       fields:

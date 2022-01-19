@@ -24,6 +24,12 @@ export const getProjects = async slug => {
   return airtable.select(endpoint, options);
 };
 
+export const getChallenges = async slug => {
+  const { endpoint, list, single } = resources.CHALLENGES;
+  const options = slug ? localize({ ...single, where: { slug } }) : localize(list);
+  return airtable.select(endpoint, options);
+};
+
 export const getPartners = async () => {
   const { endpoint, ...options } = resources.PARTNERS;
   return airtable.select(endpoint, options);
