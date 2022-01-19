@@ -11,7 +11,7 @@ export default createRouter({
     },
     {
       path: '/project/:slug(.*)?',
-      name: 'news',
+      name: 'project',
       component: () => import('./views/Project.vue'),
     },
     {
