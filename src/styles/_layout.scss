@@ -74,6 +74,7 @@ div.columns {
 
   position: relative;
   background: linear-gradient(to var(--dir), transparent, transparent 50%, var(--color-primary) 50%, var(--color-primary));
+  margin: 7rem 0;
 
   &.right { --dir: right; }
 
