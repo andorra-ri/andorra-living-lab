@@ -40,6 +40,11 @@ ul.social {
   gap: 0.75rem;
 }
 
+ul.links {
+  margin: 1.5rem 1rem;
+
+  li { margin: 1rem 0; }
+}
 
 ul.grid {
   display: grid;
@@ -79,10 +84,4 @@ ul.grid {
       h4 { margin: auto 1rem 0; }
     }
   }
-}
-
-ul.links {
-  margin: 1.5rem 1rem;
-
-  li { margin: 1rem 0; }
 }

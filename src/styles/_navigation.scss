@@ -42,6 +42,7 @@ nav {
 
   .locales-nav {
     @extend .main-nav;
+
     margin-left: 2rem;
 
     a {
@@ -58,7 +59,8 @@ nav {
 .scroller {
   position: fixed;
   display: block;
-  font-size: 1.5rem;  bottom: 0;
+  font-size: 1.5rem;
+  bottom: 0;
   right: 0;
   z-index: 2;
   padding: 0.75rem 1rem;

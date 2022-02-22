@@ -1,23 +1,29 @@
 .md {
   h1 { font-size: 36px; } // Disable h1 styling. Set equal to h2.
-  h1, h2, h3 { margin-top: 3rem; }
+
+  h1,
+  h2,
+  h3 { margin-top: 3rem; }
 
   em { font-style: italic; }
 
-  ul, ol {
+  ul,
+  ol {
     margin: 1.5rem 2.5rem;
     display: block;
     list-style-type: disc;
 
     li { margin: 0.25rem 0; }
 
-    ul, ol {
+    ul,
+    ol {
       margin: 0.25rem 1.5rem;
       list-style-type: circle;
     }
   }
 
-  ol, ol ol {
+  ol,
+  ol ol {
     margin: 1.5rem 3rem;
     list-style-type: decimal;
 
@@ -62,12 +68,14 @@
     width: calc(100% - 2rem);
     margin: 1.5rem 1rem;
   }
+
   table thead th {
     font-weight: bold;
     border: solid 1px var(--color-primary--transparent);
     padding: 0.75rem;
     text-align: center;
   }
+
   table tbody td {
     border: solid 1px var(--color-primary--transparent);
     padding: 0.75rem;
@@ -83,5 +91,5 @@
     margin: 0;
     padding: 0;
     list-style: none;
-   }
+  }
 }

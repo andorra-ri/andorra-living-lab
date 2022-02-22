@@ -28,7 +28,7 @@
       background: var(--color-primary);
       color: #fff;
 
-      &::after { content: '-' }
+      &::after { content: '-'; }
     }
   }
 }

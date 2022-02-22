@@ -5,7 +5,10 @@ body {
   font-weight: 300;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--header-font);
   text-transform: uppercase;
   font-weight: 300;
@@ -39,11 +42,14 @@ h1, h2, h3, h4 {
 }
 
 h1 { font-size: 64px; }
+
 h2 { font-size: 36px; }
+
 h3 {
   font-size: 20px;
   font-weight: 700;
 }
+
 h4 {
   font-size: 20px;
   font-weight: 700;
@@ -59,7 +65,7 @@ strong { font-weight: bold; }
 a {
   color: currentColor;
   display: inline-block;
-  text-decoration:none;
+  text-decoration: none;
   font-weight: bold;
 
   &:hover { color: var(--color-secondary); }

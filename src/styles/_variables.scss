@@ -3,11 +3,13 @@
 :root {
   font-size: 16px;
 
+  // Colors
   --color-primary: #4b71b4;
   --color-primary--transparent: #4b71b418;
   --color-secondary: #1e2742;
   --color-light: #f6f9fe;
 
+  // Text
   --background-color: #fff;
   --text-font: 'Work Sans', sans-serif;
   --text-size: 1rem;
@@ -15,9 +17,11 @@
   --header-font: 'Roboto Condensed', sans-serif;
   --header-color: var(--color-secondary);
 
+  // Other
   --color-border: #e0ecff;
 
+  // Button
   --button-color: var(--color-primary);
   --button-font: 0.75rem var(--header-font);
-  --button-padding: 1rem 2rem;;
+  --button-padding: 1rem 2rem;
 }

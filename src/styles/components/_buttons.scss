@@ -1,6 +1,6 @@
 a.button,
 button {
-  font: vaR(--button-font);
+  font: var(--button-font);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -19,16 +19,19 @@ button {
   .primary &,
   .secondary & {
     --button-color: #fff;
+
     color: var(--color-secondary);
   }
 
   &.primary {
     --button-color: var(--color-primary);
+
     color: #fff;
   }
 
   &.secondary {
     --button-color: var(--color-secondary);
+
     color: #fff;
   }
 

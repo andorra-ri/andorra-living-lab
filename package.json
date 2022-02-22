@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "lint": "eslint src && stylelint src/styles/**/*.scss",
     "serve": "vite preview"
   },
   "dependencies": {
