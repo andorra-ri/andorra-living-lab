@@ -28,6 +28,7 @@
         </div>
       </div>
     </paginated>
+    <p v-else class="empty">{{ t('projects.empty') }}</p>
   </section>
 </template>
 

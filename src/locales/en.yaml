@@ -72,6 +72,7 @@ sectors:
 challenges:
   title: our {strong}
   title_em: challenges
+  empty: There is no challenges to show.
   finished: Finished challenge
   more: Learn more
 
@@ -84,6 +85,7 @@ projects:
   title: latest {strong}
   title_em: case studies
   description: Read our case studies to find out how we have helped our collaborators succeed.
+  empty: There is no case studies to show.
   more: Learn more
 
   links: Links

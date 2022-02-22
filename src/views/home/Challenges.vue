@@ -6,6 +6,7 @@
       </i18n-t>
       <p>{{ t('challenges.description') }}</p>
       <paginated
+        v-if="challenges.length"
         v-slot="{ item: challenge }"
         :items="challenges"
         :per-page="4"
@@ -21,6 +22,7 @@
           </p>
         </div>
       </paginated>
+      <p v-else class="empty">{{ t('challenges.empty') }}</p>
     </div>
   </section>
 </template>
