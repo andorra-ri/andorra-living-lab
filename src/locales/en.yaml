@@ -72,6 +72,7 @@ sectors:
 challenges:
   title: our {strong}
   title_em: challenges
+  description: A powerful way to incentivise participants to solve problems and create submissions for new products, services, and process improvements.
   empty: There is no challenges to show.
   finished: Finished challenge
   more: Learn more
