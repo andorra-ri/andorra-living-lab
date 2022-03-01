@@ -53,18 +53,13 @@ div.columns {
   --gap: 0;
 
   display: flex;
-  flex-wrap: wrap;
   gap: var(--gap);
 
   .column {
-    flex: 1 0 auto;
+    flex: 1;
     box-sizing: border-box;
     position: relative;
   }
-
-  &--2 .column { flex-basis: calc(50% - var(--gap)); }
-  &--3 .column { flex-basis: calc(33% - var(--gap)); }
-  &--4 .column { flex-basis: calc(25% - var(--gap)); }
 
   &.spaced { --gap: 2rem; }
   &.reversed { flex-direction: row-reverse; }
