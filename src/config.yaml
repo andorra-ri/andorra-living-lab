@@ -29,8 +29,8 @@ livinglab:
   video:
     # https://www.youtube.com/embed/{id}
     # https://player.vimeo.com/video/{id}
-    source: https://player.vimeo.com/video/662193842
-    cover: https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a
+    source: https://www.youtube.com/embed/sTTH6LT8p2Y
+    cover: /images/team_living_lab.jpg
   images:
     side:
       path: /images/4_helix_en.png

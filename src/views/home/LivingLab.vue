@@ -34,9 +34,8 @@
       </div>
       <logos-list :logos="partners" />
     </div>
-    <!--video-embed :url="video.source" :cover="video.cover" class="video" /-->
-    <!--div class="ribbon right shifted" style="--shift:5rem"-->
-    <div class="ribbon right">
+    <video-embed :url="video.source" :cover="video.cover" class="video" />
+    <div class="ribbon right shifted" style="--shift:5rem">
       <div class="container columns columns--4">
         <article v-for="benefit in benefits" :key="benefit" class="column">
           <h3 class="lined">{{ t(`livinglab.benefits.${benefit}.title`) }}</h3>
