@@ -5,7 +5,11 @@
       :key="i"
       :open="open === i"
       @toggle="event => onToggled(i, event)">
-      <summary>{{ item.title }}</summary>
+      <summary>
+        <slot name="title" :item="item">
+          {{ item.title }}
+        </slot>
+      </summary>
       <slot :item="item" />
     </details>
   </div>

@@ -1,0 +1,112 @@
+title: Andorra Living Lab
+tagline: Un entorn de proves únic {strong}
+tagline_em: Un país innovador
+
+contact: Contacte
+contact_phone: Telèfon
+contact_email: Email
+follow_us: Segueix-nos a {name}
+
+navigation:
+  home: Inici
+  challenges: Reptes
+  case_studies: Casos d'estudi
+  contact: Contacte
+
+livinglab:
+  title: Ecosistema únic per {strong}
+  title_em: dissenyar, crear i testejar
+
+  involve: Andorra Living Lab és un espai de coordinació, investigació, disseny i validació de projectes d'innovació que implica tots els actors d'un mateix ecosistema, possibilitant el desenvolupament de nous productes i serveis, així com afavorint l'adopció de noves tecnologies i una reflexió profunda al respecte.
+  value: El país ofereix l'oportunitat de crear sinergies entre l'ecosistema emprenedor, fomentant el talent i construint xarxes que abasten tant aspectes socials com tecnològics.
+  keypoints:
+    proximity:
+      title: Proximitat
+      description: Accés a responsables de decisions, privats i científics rellevants, facilitant el desenvolupament de pilots i MVPs en un entorn real.
+    logistics:
+      title: Logística
+      description: Suport logístic per desenvolupar, provar, validar o demostrar conceptes, productes o serveis a escala nacional.
+    cocreation:
+      title: Cocreació
+      description: Ecosistema d'innovació oberta per trobar els millors socis per col·laborar en els temes d'especialització del país. Dades multisectorials d'alta quantitat i qualitat disponibles per a iniciatives col·laboratives.
+    regulation:
+      title: Regulació
+      description: Flexibilitat en un marc regulador favorable per a la innovació que permet un testatge ràpid de prototips, així com una ràpida adaptació a les noves tecnologies i tendències.
+
+  open_innovation: Impulsant la innovació {em}
+  open_innovation_em: oberta
+
+  join: Connecta amb l'ecosistema innovador d'Andorra.
+  join_now: Uneix-te
+
+  methodology: Recolzat en metodologies {strong}
+  methodology_em: punteres i de confiança
+  quad_helix: Andorra Living Lab es regeix pel model Quadruple Helix. La clau de l'èxit és implicar tots els actors que conviuen en una mateixa comunitat i beneficiar-se de les millores que aporten les noves tecnologies adoptades a l'ecosistema.
+  methodologies: Segueix les metodologies utilitzades en el desenvolupament d'ecosistemes d'innovació basades en Lean Startup, Agile i Open Innovation Frameworks.
+
+  benefits:
+    co-creation:
+      title: Cocreació
+      description: Connecta i promou sinergies entre potencials col·laboradors.
+    exploration:
+      title: Exploració
+      description: Troba noves aplicacions, productes i oportunitats de mercat emergents.
+    experimentation:
+      title: Experimentació
+      description: Prototipa i prova in situ, minimitzant els temps de prova i error.
+    evaluation:
+      title: Avaluació
+      description: Obtén resultats segons criteris reals objectius i redueix el temps de comercialització.
+
+sectors:
+  title: Centrat en sectors {strong}
+  title_em: estratègics
+  ods: Andorra Living Lab funciona d'acord amb el {plan} per a la implementació de l'Agenda 2030 de les Nacions Unides per al Desenvolupament Sostenible.
+  ods_strategic_plan: Pla Estratègic Nacional
+
+  mountain: Muntanya
+  sport_health_wellness: Esport, Salut i Benestar
+  sustainability: Sostenibilitat
+  education: Educació
+
+challenges:
+  title: els nostres {strong}
+  title_em: reptes
+  description: Una potent incentiu per resoldre problemes i crear propostes de nous productes, serveis i millores en els processos.
+  empty: No hi ha reptes per mostrar.
+  finished: Repte acabat
+  more: Més informació
+
+  apply: Aplica al repte
+  know_more: Vols saber-ne més?
+  contact: Contacta amb nosaltres
+  contact_us: Contacta'ns
+
+projects:
+  title: últims {strong}
+  title_em: casos d'estudi
+  description: Llegeix els nostres casos d'estudi per descobrir com hem ajudat els nostres col·laboradors a tenir èxit.
+  empty: No hi ha casos d'estudi per mostrar.
+  more: Saber-ne més
+
+  links: Enllaços
+  visit_website: Visita la pàgina
+  documents: Documents
+
+  know_more: Vols saber més?
+  contact: Contacta amb nosaltres
+  contact_us: Contacta'ns
+
+
+testimonials:
+  title: què {strong}
+  title_em: opinen
+
+footer:
+  last_will: Andorra Living Lab està impulsat per Andorra Recerca i Innovació. Segueix-nos a les xarxes socials i comparteix la teva experiència amb el hashtag {hashtag}.
+  copyright_all_rights: Tots els drets reservats
+
+  useful_links: Enllaços d'interès
+  links:
+    ari: Andorra Recerca + Innovació
+    andorrabiosfera: Andorra Reserva de la Biosfera

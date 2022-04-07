@@ -27,14 +27,17 @@
           <p>{{ t('livinglab.value') }}</p>
         </div>
         <div class="column">
-          <accordion v-slot="{ item }" :items="keypoints" :preview="0">
-            <p>{{ t(`livinglab.keypoints.${item.id}.description`) }}</p>
+          <accordion :items="keypoints" :preview="0">
+            <template #title="{ item }">{{ t(`livinglab.keypoints.${item}.title`) }}</template>
+            <template #default="{ item }">
+              <p>{{ t(`livinglab.keypoints.${item}.description`) }}</p>
+            </template>
           </accordion>
         </div>
       </div>
       <logos-list :logos="partners" />
     </div>
-    <video-embed :url="video.source" :cover="video.cover" class="video" />
+    <video-embed :url="video.source[locale]" :cover="video.cover" class="video" />
     <div class="ribbon right shifted" style="--shift:5rem">
       <div class="container columns columns--4">
         <article v-for="benefit in benefits" :key="benefit" class="column">
@@ -74,13 +77,8 @@ export default {
   name: 'LivingLab',
   components: { Accordion, LogosList, VideoEmbed },
   setup() {
-    const { t } = useI18n();
+    const { t, locale } = useI18n();
     const partners = ref([]);
-
-    const keypoints = livinglab.keypoints.map(point => ({
-      id: point,
-      title: t(`livinglab.keypoints.${point}.title`),
-    }));
 
     onMounted(async () => {
       const p = await getPartners();
@@ -91,7 +89,7 @@ export default {
       }));
     });
 
-    return { t, ...livinglab, keypoints, partners };
+    return { t, locale, ...livinglab, partners };
   },
 };
 </script>

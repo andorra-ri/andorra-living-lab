@@ -52,7 +52,7 @@ nav {
       &.active { font-weight: 700; }
     }
 
-    li + li a { border-left: 1px solid #fff8; }
+    li + li a { border-left: 1px solid currentColor; }
   }
 }
 

@@ -33,7 +33,7 @@
             <p>{{ t('contact_email') }}: <a :href="`mailto:${email}`">{{ email }}</a></p>
           </div>
           <div class="column">
-            <h3>Useful links</h3>
+            <h3>{{ t('footer.useful_links') }}</h3>
             <ul class="links">
               <li v-for="(link, name) in links" :key="name">
                 <a :href="link" target="blank">{{ t(`footer.links.${name}`) }}</a>
