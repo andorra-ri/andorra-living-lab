@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { getChallenges } from '/@/services/api.service';
 import Paginated from '/@/components/Paginated.vue';
@@ -48,7 +48,7 @@ export default {
 
     const formatDate = date => new Intl.DateTimeFormat('ca', format).format(new Date(date));
 
-    onMounted(async () => {
+    watch(locale, async () => {
       const data = await getChallenges();
       challenges.value = data.map(challenge => {
         const dateStart = new Date(challenge.date_start);
@@ -61,7 +61,7 @@ export default {
             : `${formatDate(dateStart)} - ${formatDate(dateEnd)}`;
         return { ...challenge, dateString, passed };
       });
-    });
+    }, { immediate: true });
 
     return { t, locale, challenges };
   },

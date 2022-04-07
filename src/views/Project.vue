@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 import { Remarkable } from 'remarkable';
@@ -59,7 +59,7 @@ export default {
       typographer: true,
     });
 
-    onMounted(async () => {
+    watch(locale, async () => {
       try {
         const [{
           [`name_${locale.value}`]: name,
@@ -72,7 +72,7 @@ export default {
       } catch (error) {
         push('/#case-studies');
       }
-    });
+    }, { immediate: true });
 
     return { t, locale, project };
   },
