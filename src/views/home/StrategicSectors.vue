@@ -6,7 +6,10 @@
       </i18n-t>
       <div class="cards">
         <article v-for="sector in sectors" :key="sector.title" class="card">
-          <img :src="sector.cover" class="cover">
+          <figure class="cover duotone" :style="sector.cover.style">
+            <img :src="sector.cover.url">
+            <figcaption>{{ sector.cover.caption }}</figcaption>
+          </figure>
           <div class="card-content">
             <img v-svg-inline :src="`icons/${sector.title}.svg`" class="icon">
             <h4>{{ t(`sectors.${sector.title}`) }}</h4>

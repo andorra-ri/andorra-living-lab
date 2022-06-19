@@ -2,8 +2,9 @@
   <section id="testimonials" class="section">
     <div v-if="testimonials.length" class="container columns columns--2">
       <div class="column">
-        <figure class="cover cover--partial secondary" style="--width:115%">
-          <img :src="cover" class="shaded">
+        <figure class="cover cover--partial duotone" :style="['--width:115%', cover.style]">
+          <img :src="cover.url">
+          <figcaption>{{ cover.caption }}</figcaption>
         </figure>
       </div>
       <div class="column testimonials">

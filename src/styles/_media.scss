@@ -16,18 +16,26 @@ figure.cover img {
   &.contain img { object-fit: contain; }
 }
 
-img.shaded {
-  mix-blend-mode: screen;
-  filter: grayscale(50%) contrast(150%) brightness(0.5);
-}
-
 figure.cover figcaption {
   position: absolute;
   bottom: 0;
   right: 0;
-  color: #fff8;
+  color: #fff5;
   font-size: 0.5rem;
   padding: 0.5em 1em;
+}
+
+.duotone {
+  background-color: var(--color-primary);
+
+  img {
+    filter:
+      grayscale(1)
+      contrast(var(--contrast, 1))
+      brightness(var(--brightness, 1));
+    mix-blend-mode: var(--blending, multiply);
+    opacity: var(--opacity, 0.75);
+  }
 }
 
 .logo {

@@ -2,7 +2,7 @@
   <section id="living-lab" class="section light">
     <div class="container columns columns--3 shifted" style="--shift:100px">
       <div class="column box">
-        <figure class="cover">
+        <figure class="cover duotone" :style="images.thumbnail.style">
           <img :src="images.thumbnail.path">
           <figcaption v-if="images.thumbnail.caption">{{ images.thumbnail.caption }}</figcaption>
         </figure>

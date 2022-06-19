@@ -37,8 +37,11 @@ livinglab:
     side:
       path: /images/4_helix_en.png
     thumbnail:
-      path: /images/project_whiteboard.jpg
-      caption: Photo by Kvalifik on Unsplash
+      path: https://images.unsplash.com/flagged/photo-1556514767-5c270b96a005?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z2xhc3MlMjBib2FyZHxlbnwwfHwwfHw%3D&w=1000&q=80
+      caption: Photo by Diggity Marketing on Unsplash
+      style:
+        --brightness: 1.25
+        --blending: multiply
   join:
     url: mailto:livinglab@ari.ad
 
@@ -56,16 +59,37 @@ livinglab:
 
 sectors:
   - title: mountain
-    cover: https://media.istockphoto.com/photos/quadcopter-flying-on-background-volcanic-peak-aerial-videography-picture-id1287578380?k=20&m=1287578380&s=612x612&w=0&h=5Uc8VUbdnR_BFCov47drwqXZVZ89TRJBviMeRTeawxs=
+    cover:
+      url: https://images.unsplash.com/photo-1515405969538-5642ed9d0cc4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
+      caption: photo by eric Odiin on Unsplash
   - title: sport_health_wellness
-    cover: https://media.istockphoto.com/photos/running-on-tracks-picture-id616002088?k=20&m=616002088&s=612x612&w=0&h=32pfx-irqVLziKPPl_oE46oX_6CZeEtMk8TIpa8TKbc=
+    cover:
+      url: https://images.unsplash.com/photo-1577344718665-3e7c0c1ecf6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80
+      caption: Photo by Max on Unsplash
+      style:
+        --brightness: 2
   - title: sustainability
-    cover: https://media.istockphoto.com/photos/scientist-inspecting-plants-picture-id637078430?b=1&k=20&m=637078430&s=170667a&w=0&h=_DNsCqGi_NoddLHxsAzamydL_zRIKppOlRYaS2hS64I=
+    cover:
+      url: https://images.unsplash.com/photo-1531818824911-2514c27dced3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80
+      caption: photo by Rainier Ridao on Unsplash
+      style:
+        --brightness: 1.4
+        --contrast: 1.3
   - title: education
-    cover: https://media.istockphoto.com/photos/in-a-computer-science-class-boy-wearing-virtual-reality-headset-works-picture-id1089737754?k=20&m=1089737754&s=612x612&w=0&h=T49ftz0UZktQOEiTXvfeUQWBqyn8BfQ22fJ2sb5let8=
+    cover:
+      url: https://images.unsplash.com/photo-1585980243496-fe29a36bd382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1898&q=80
+      caption: photo by adam winger on Unsplash
+      style:
+        --brightness: 1.2
+        --contrast: 1.1
 
 testimonials:
-  cover: https://media.istockphoto.com/photos/young-african-american-girl-playing-game-using-vr-glasses-enjoying-picture-id1201598872?k=20&m=1201598872&s=612x612&w=0&h=gQfqYafj6hJTlqDLO4jEkrupZYm9XWaPuhNgSPHzBHc=
+  cover:
+    url: https://images.unsplash.com/photo-1587400520167-0a46c3c98582?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80
+    caption: photo by Christine Sandu on Unsplash
+    style:
+      --brightness: 1.5
+      --contrast: 1.5
 
 api:
   base: appVfnAvub5J7YzZl
