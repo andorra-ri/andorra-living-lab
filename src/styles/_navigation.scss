@@ -7,8 +7,11 @@ nav {
   background: #fff;
   box-shadow: 0 4px 16px 0 var(--color-primary--transparent);
   color: var(--color-primary);
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
 
-  &[data-scroll="0"] {
+  &[data-top="true"] {
     background: none;
     color: #fff;
 
@@ -63,6 +66,6 @@ nav {
   bottom: 0;
   right: 0;
   z-index: 2;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1.25rem;
   margin: 1rem;
 }

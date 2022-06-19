@@ -23,7 +23,7 @@ export default createRouter({
   scrollBehavior(to) {
     return to.hash ? {
       el: to.hash,
-      top: 150, // offset to avoid navigation bar
+      top: 85, // offset to avoid navigation bar
       behavior: 'smooth',
     } : { top: 0 };
   },

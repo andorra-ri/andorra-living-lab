@@ -1,5 +1,5 @@
 <template>
-  <nav :data-scroll="scroll.y">
+  <nav :data-top="scroll.y < 100">
     <div class="container">
       <img v-svg-inline :src="`/images/logo_${currentLocale}.svg`" class="logo">
       <ul class="main-nav">
