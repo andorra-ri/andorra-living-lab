@@ -1,6 +1,6 @@
 title: Andorra Living Lab
-tagline: A unique testing environment {strong}
-tagline_em: An innovative country
+tagline: Develop ideas at a {strong}
+tagline_em: country scale
 
 contact: Contact
 contact_phone: Phone
@@ -36,7 +36,8 @@ livinglab:
   open_innovation: Driving {em} innovation
   open_innovation_em: open
 
-  join: Connect with the innovation ecosystem of Andorra.
+  connect: Connect with the emerging innovation ecosystem of Andorra.
+  join: Join the Living Lab
   join_now: Join now
 
   methodology: Rely on {strong} methodologies
