@@ -12,6 +12,7 @@ nav {
   background: #fff;
   box-shadow: 0 4px 16px 0 var(--color-primary--transparent);
   color: var(--color-primary);
+  font-size: 0.85rem;
   transition:
     background 0.5s ease,
     color 0.5s ease;
@@ -40,7 +41,7 @@ nav {
       font-weight: bold;
       color: inherit;
       letter-spacing: 2px;
-      padding: 0 1rem;
+      padding: 0 0.5rem;
       text-decoration: none;
       text-transform: uppercase;
 
