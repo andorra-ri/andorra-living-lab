@@ -23,7 +23,11 @@ navigation:
   contact: '#contact'
 
 landing:
-  cover: images/mountains.jpg
+  cover:
+    url: /images/mesh_landscape.jpg
+    style:
+      --contrast: 0.75
+      --brightness: 1.5
 
 livinglab:
   video:

@@ -1,6 +1,9 @@
 <template>
   <section id="landing" class="primary">
-    <img :src="cover" class="cover" draggable="false">
+    <figure class="cover duotone" :style="cover.style">
+      <img :src="cover.url" draggable="false">
+      <figcaption>{{ cover.caption }}</figcaption>
+    </figure>
     <div class="hero">
       <em>Andorra Living Lab</em>
       <i18n-t tag="h1" keypath="tagline">
@@ -25,7 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 #landing {
-  height: 90vh;
+  height: min(80vh, 100vw);
   padding: 4rem 0;
   box-sizing: border-box;
   position: relative;
@@ -33,19 +36,13 @@ export default {
   flex-direction: column;
 
   .cover {
-    left: calc(50% - 11rem);
-    width: calc(50% + 11rem);
     // Fade
-    mask-image: linear-gradient(to right, transparent 0%, black 25%) !important;
-
-    // Monotone
-    mix-blend-mode: screen;
-    filter: grayscale(50%) contrast(150%) brightness(0.5);
+    mask-image: linear-gradient(to right, transparent 0%, black 50%) !important;
   }
 
   .hero {
     h1 {
-      max-width: 56rem;
+      max-width: 45rem;
 
       strong { display: block; }
     }

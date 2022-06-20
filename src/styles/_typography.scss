@@ -41,7 +41,13 @@ h4 {
   }
 }
 
-h1 { font-size: 64px; }
+h1 {
+  font-size: min(10vw, 5rem);
+  line-height: 1.1;
+  text-transform: none;
+
+  strong { text-transform: uppercase }
+}
 
 h2 { font-size: 36px; }
 
