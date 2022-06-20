@@ -1,3 +1,8 @@
+#brand {
+  flex: 0 0 auto;
+  height: 2rem;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -15,7 +20,7 @@ nav {
     background: none;
     color: #fff;
 
-    .logo * { fill: #fff; }
+    #brand * { fill: #fff; }
   }
 
   .container {
@@ -27,7 +32,7 @@ nav {
     display: inline-flex;
     text-align: center;
     margin-left: auto;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
 
     a {
       display: block;
