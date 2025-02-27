@@ -1,7 +1,13 @@
 <template>
   <div v-if="challenge">
     <header class="section primary">
-      <img :src="challenge.cover[0].url" class="cover shaded" draggable="false">
+      <img
+        v-if="challenge.cover && challenge.cover[1] && challenge.cover[1].url"
+        :src="challenge.cover[1].url"
+        class="cover shaded"
+        draggable="false"
+      />
+      <img v-else :src="challenge.cover[0].url" class="cover shaded" draggable="false">
     </header>
     <section class="section">
       <div class="container">
@@ -15,12 +21,23 @@
             <h3>{{ t('challenges.know_more') }}</h3>
             <p>{{ t('challenges.contact') }}</p>
             <p><a href="#contact">{{ t('challenges.contact_us') }} &rarr;</a></p>
+          
+            <div v-if="challenge.partners" >
+              <h3>{{ t('challenges.collaborators') }}</h3>
+              <img v-for="(image, index) in challenge.partners" :key="index" :src="image.url" class="partner-logo">
+            </div>
           </div>
         </aside>
         <div class="main">
           <h1>{{ challenge.name }}</h1>
           <!-- eslint-disable-next-line vue/no-v-html -->
           <div class="md" v-html="challenge.description" />
+               
+          <div v-if="challenge.bases">
+            <a :href="`https://ari.ad`" class="button block">
+              {{ t('challenges.bases_download') }}
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -83,6 +100,16 @@ header.section { height: 10rem; }
     background: #fff;
     padding: 0.75rem 1rem;
     margin: 2rem 0;
+  }
+
+  .colaborators {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* 2 columnas con tamaño ajustado */
+    gap: 10px;
+  }
+
+  .partner-logo {
+    max-width: 80px;
   }
 }
 </style>

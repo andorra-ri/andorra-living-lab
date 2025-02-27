@@ -36,9 +36,9 @@ livinglab:
   open_innovation: Driving {em} innovation
   open_innovation_em: open
 
-  connect: Connect with the emerging innovation ecosystem of Andorra.
-  join: Join the Living Lab
-  join_now: Join now
+  connect: Connect with the emerging innovation ecosystem of Andorra
+  join: Apply in our Challenges
+  join_now: Apply now
 
   methodology: Rely on {strong} methodologies
   methodology_em: lead & trusted
@@ -82,6 +82,9 @@ challenges:
   know_more: Want to know more?
   contact: Contact with us through our representative or submit a inquiry online.
   contact_us: Contact us
+  bases_download: Download the requirments
+
+  collaborators: Collaborators
 
 projects:
   title: latest {strong}
