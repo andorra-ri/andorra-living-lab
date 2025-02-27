@@ -139,6 +139,7 @@ api:
           - cover
           - date_start
           - date_end
+          - bases
         sort:
           date_start: desc
         where:
@@ -156,7 +157,8 @@ api:
           - link
           - date_start
           - date_end
-
+          - bases
+          - partners
     PARTNERS:
       endpoint: partners
       fields:

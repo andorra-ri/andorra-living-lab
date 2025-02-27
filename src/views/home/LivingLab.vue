@@ -15,7 +15,7 @@
       <div class="column box secondary">
         <h4>{{ t('livinglab.join') }}</h4>
         <p>{{ t('livinglab.connect') }}</p>
-        <p><a :href="join.url" class="button">{{ t('livinglab.join_now') }}</a></p>
+        <p><a :href="`/#challenges`" class="button">{{ t('livinglab.join_now') }}</a></p>
       </div>
     </div>
     <div class="container">
