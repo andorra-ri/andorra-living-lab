@@ -13,7 +13,7 @@
         class="grid">
         <img :src="challenge.cover[0].url" :class="{ passed: challenge.passed }">
         <div class="grid-content">
-          <em class="date">{{ challenge.dateString }}</em>
+          <!-- <em class="date">{{ challenge.dateString }}</em> -->
           <h4>{{ challenge[`name_${locale}`] }}</h4>
           <p>
             <router-link :to="`/challenge/${challenge.slug}`">
