@@ -34,7 +34,7 @@
           <div class="md" v-html="challenge.description" />
                
           <div v-if="challenge.bases">
-            <a :href="`https://ari.ad`" class="button block">
+            <a :href="challenge.bases[0].url" class="button block">
               {{ t('challenges.bases_download') }}
             </a>
           </div>
