@@ -3,7 +3,7 @@
     <li v-for="partner in partners" :key="partner.name">
       <a :href="partner.web" target="blank">
         <img
-          :src="partner.logo[0].url"
+          :src="partner.logo"
           :alt="partner.name"
           :title="partner.name"
           class="logo">
@@ -18,7 +18,7 @@ import { usePartnersStore } from '/@/stores/partnersStore';
 
 export default {
   name: 'StrategicPartners',
-  
+
   setup() {
     const partnersStore = usePartnersStore();
 

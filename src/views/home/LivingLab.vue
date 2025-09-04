@@ -66,29 +66,30 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { getPartners } from '/@/services/api.service';
 import Accordion from '/@/components/Accordion.vue';
 import LogosList from '/@/components/LogosList.vue';
 import VideoEmbed from '/@/components/VideoEmbed.vue';
 import { livinglab } from '/@/config.yaml';
+import { usePartnersStore } from '/@/stores/partnersStore';
 
 export default {
   name: 'LivingLab',
   components: { Accordion, LogosList, VideoEmbed },
   setup() {
     const { t, locale } = useI18n();
-    const partners = ref([]);
 
-    onMounted(async () => {
-      const p = await getPartners();
-      partners.value = p.map(partner => ({
+    const partnersStore = usePartnersStore();
+
+    const partners = computed(() =>
+      partnersStore.partners.map(partner => ({
         name: partner.name,
         url: partner.web,
-        image: partner.logo[0].url,
-      }));
-    });
+        image: partner.logo ?? '',
+      }))
+    );
 
     return { t, locale, ...livinglab, partners };
   },
