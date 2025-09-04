@@ -18,7 +18,7 @@
           <blockquote class="primary">
             <p>{{ testimonial[`testimonial_${locale}`] }}</p>
             <div class="author">
-              <img :src="testimonial.photo[0].url" class="avatar">
+              <img :src="testimonial.photo" class="avatar">
               <div class="details">
                 <h4>{{ testimonial.name }}</h4>
                 <em>{{ testimonial.company }}</em>
@@ -32,9 +32,9 @@
 </template>
 
 <script>
-import { ref, watch } from 'vue';
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { getTestimonials } from '/@/services/api.service';
+import { useTestimonialsStore } from '/@/stores/testimonialsStore'
 import Paginated from '/@/components/Paginated.vue';
 import config from '/@/config.yaml';
 
@@ -43,11 +43,10 @@ export default {
   components: { Paginated },
   setup() {
     const { t, locale } = useI18n();
-    const testimonials = ref([]);
 
-    watch(locale, async () => {
-      testimonials.value = await getTestimonials();
-    }, { immediate: true });
+    const testimonialsStore = useTestimonialsStore();
+
+    const testimonials = computed(() => testimonialsStore.testimonials);
 
     return { t, locale, testimonials, ...config.testimonials };
   },
