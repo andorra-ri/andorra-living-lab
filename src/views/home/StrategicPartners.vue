@@ -13,19 +13,18 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
-import { getPartners } from '/@/services/api.service';
+import { mapState } from 'pinia';
+import { usePartnersStore } from '/@/stores/partnersStore';
 
 export default {
   name: 'StrategicPartners',
+  
   setup() {
-    const partners = ref([]);
+    const partnersStore = usePartnersStore();
 
-    onMounted(async () => {
-      partners.value = await getPartners();
-    });
+    const partners = computed(() => partnersStore.partners);
 
     return { partners };
-  },
+  }
 };
 </script>
