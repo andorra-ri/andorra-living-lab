@@ -13,8 +13,8 @@
       class="cards">
       <div class="card-box">
         <figure class="cover">
-          <img :src="project.cover[0].url" class="cover">
-          <figcaption>{{ project.cover[0].filename }}</figcaption>
+          <img :src="project.cover[0]" class="cover">
+          <figcaption>{{ project.cover_caption[0] }}</figcaption>
         </figure>
         <div class="box secondary">
           <p class="tags">
@@ -37,21 +37,22 @@
 </template>
 
 <script>
-import { ref, watch } from 'vue';
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { getProjects } from '/@/services/api.service';
 import Paginated from '/@/components/Paginated.vue';
+import { useProjectsStore } from '/@/stores/projectsStore';
 
 export default {
   name: 'CaseStudies',
   components: { Paginated },
   setup() {
     const { t, locale } = useI18n();
-    const projects = ref([]);
 
-    watch(locale, async () => {
-      projects.value = await getProjects();
-    }, { immediate: true });
+    const projectsStore = useProjectsStore();
+
+    const projects = computed(() => {
+      return projectsStore.projects
+    });
 
     return { t, locale, projects };
   },
