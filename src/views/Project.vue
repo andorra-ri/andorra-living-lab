@@ -1,7 +1,7 @@
 <template>
   <div v-if="project">
     <header class="section primary">
-      <img :src="project.cover[0].url" class="cover shaded" draggable="false">
+      <img :src="project.cover[0]" class="cover shaded" draggable="false">
     </header>
     <section class="section">
       <div class="container">
@@ -38,12 +38,12 @@
 </template>
 
 <script>
-import { ref, watch } from 'vue';
+import { computed, onBeforeMount } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 import { Remarkable } from 'remarkable';
-import { getProjects } from '/@/services/api.service';
 import fileIcon from '/@/utils/file-icons';
+import { useProjectsStore } from '/@/stores/projectsStore';
 
 export default {
   name: 'Project',
@@ -51,7 +51,8 @@ export default {
     const { t, locale } = useI18n();
     const { params } = useRoute();
     const { push } = useRouter();
-    const project = ref(undefined);
+
+    const projectsStore = useProjectsStore();
 
     const md = new Remarkable('full', {
       html: true,
@@ -59,23 +60,34 @@ export default {
       typographer: true,
     });
 
-    watch(locale, async () => {
-      try {
-        const [{
-          [`name_${locale.value}`]: name,
-          [`description_${locale.value}`]: description,
-          documents: docs = [],
-          ...rest
-        }] = await getProjects(params.slug);
-        const documents = docs.map(doc => ({ ...doc, icon: fileIcon(doc.type) }));
-        project.value = { ...rest, name, documents, description: md.render(description) };
-      } catch (error) {
-        push('/#case-studies');
+    const project = computed(() => {
+      const raw = projectsStore.project;
+
+      if (!raw) return null;
+      
+      const {
+        [`name_${locale.value}`]: name,
+        [`description_${locale.value}`]: description,
+        documents: docs = [],
+        ...rest
+      } = raw;
+
+      const filteredDocs = docs.filter((e) => e);
+      const documents = filteredDocs.map(doc => ({ ...doc, icon: fileIcon(doc.type) }));
+
+      return { ...rest, name, documents, description: md.render(description) }
+    });
+
+    onBeforeMount(async () => {
+      await projectsStore.getProject(params.slug);
+
+      if (!projectsStore.project) {
+        router.push('/#case-studies');
       }
-    }, { immediate: true });
+    })
 
     return { t, locale, project };
-  },
+  }
 };
 </script>
 
