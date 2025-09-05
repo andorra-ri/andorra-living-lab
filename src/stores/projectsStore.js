@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { db } from '/@/firebase'
-import { collection, query, where, orderBy, getDocs } from "@firebase/firestore";
+import { collection, query, where, orderBy, limit, getDocs } from "@firebase/firestore";
 import { localizeFields, replaceGsUrlsWithPublicUrlsAsync } from '/@/helpers'
 
 export const useProjectsStore = defineStore('projects', {
