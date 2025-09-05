@@ -2,12 +2,12 @@
   <div v-if="challenge">
     <header class="section primary">
       <img
-        v-if="challenge.cover && challenge.cover[1] && challenge.cover[1].url"
-        :src="challenge.cover[1].url"
+        v-if="challenge.cover && challenge.cover[1]"
+        :src="challenge.cover[1]"
         class="cover shaded"
         draggable="false"
       />
-      <img v-else :src="challenge.cover[0].url" class="cover shaded" draggable="false">
+      <img v-else :src="challenge.cover[0]" class="cover shaded" draggable="false">
     </header>
     <section class="section">
       <div class="container">
@@ -24,7 +24,7 @@
           
             <div v-if="challenge.partners" >
               <h3>{{ t('challenges.collaborators') }}</h3>
-              <img v-for="(image, index) in challenge.partners" :key="index" :src="image.url" class="partner-logo">
+              <img v-for="(image, index) in challenge.partners" :key="index" :src="image" class="partner-logo">
             </div>
           </div>
         </aside>
@@ -34,7 +34,7 @@
           <div class="md" v-html="challenge.description" />
                
           <div v-if="challenge.bases">
-            <a :href="challenge.bases[0].url" class="button block">
+            <a :href="challenge.bases[0]" class="button block">
               {{ t('challenges.bases_download') }}
             </a>
           </div>
@@ -45,11 +45,11 @@
 </template>
 
 <script>
-import { ref, watch } from 'vue';
+import { computed, onBeforeMount } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 import { Remarkable } from 'remarkable';
-import { getChallenges } from '/@/services/api.service';
+import { useChallengesStore } from '/@/stores/challengesStore'
 
 export default {
   name: 'Challenge',
@@ -57,7 +57,8 @@ export default {
     const { t, locale } = useI18n();
     const { params } = useRoute();
     const { push } = useRouter();
-    const challenge = ref(undefined);
+
+    const challengesStore = useChallengesStore();
 
     const md = new Remarkable('full', {
       html: true,
@@ -65,18 +66,27 @@ export default {
       typographer: true,
     });
 
-    watch(locale, async () => {
-      try {
-        const [{
-          [`name_${locale.value}`]: name,
-          [`description_${locale.value}`]: description,
-          ...rest
-        }] = await getChallenges(params.slug);
-        challenge.value = { ...rest, name, description: md.render(description) };
-      } catch (error) {
-        push('/#challenges');
+    const challenge = computed(() => {
+      const raw = challengesStore.challenge;
+
+      if (!raw) return null;
+      
+      const {
+        [`name_${locale.value}`]: name,
+        [`description_${locale.value}`]: description,
+        ...rest
+      } = raw;
+
+      return { ...rest, name, description: md.render(description) }
+    });
+
+    onBeforeMount(async () => {
+      await challengesStore.getChallenge(params.slug);
+
+      if (!challengesStore.challenge) {
+        router.push('/#challenges');
       }
-    }, { immediate: true });
+    })
 
     return { t, locale, challenge };
   },
