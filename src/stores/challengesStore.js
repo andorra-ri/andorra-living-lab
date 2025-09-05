@@ -19,6 +19,7 @@ export const useChallengesStore = defineStore('challenges', {
                     collection(db, "challenges"),
                     where("active", "==", true),
                     orderBy("date_start", "desc"),
+                    orderBy("order", "desc"),
                 );
                 const snapshot = await getDocs(q);
 
