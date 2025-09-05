@@ -11,7 +11,6 @@
     "@firebase/app": "^0.14.2",
     "@firebase/firestore": "^4.9.1",
     "@firebase/storage": "^0.14.0",
-    "painless-airtable": "^0.2.1",
     "pinia": "^3.0.3",
     "remarkable": "^2.0.1",
     "reset-css": "^5.0.1",

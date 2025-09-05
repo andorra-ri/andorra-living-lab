@@ -68,7 +68,6 @@
 <script>
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { getPartners } from '/@/services/api.service';
 import Accordion from '/@/components/Accordion.vue';
 import LogosList from '/@/components/LogosList.vue';
 import VideoEmbed from '/@/components/VideoEmbed.vue';
