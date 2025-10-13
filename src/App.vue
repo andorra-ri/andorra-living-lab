@@ -1,7 +1,8 @@
 <template>
-  <navigation />
+  <navigation v-if="!isDashBoard" />
+  <dash-header v-else/>
   <router-view />
-  <page-footer />
+  <page-footer v-if="!isDashBoard" />
 </template>
 
 <script>
@@ -12,10 +13,19 @@ import { useTestimonialsStore } from '/@/stores/testimonialsStore'
 import { useProjectsStore } from '/@/stores/projectsStore'
 import Navigation from '/@/views/Navigation.vue';
 import PageFooter from '/@/views/PageFooter.vue';
+import DashHeader from '/@/views/dashBoard/DashHeader.vue';
+
 
 export default {
   name: 'App',
-  components: { Navigation, PageFooter },
+  components: { Navigation, PageFooter, DashHeader },
+
+  computed: {
+    isDashBoard() {
+      return this.$route.meta?.isDashBoard || false
+    },
+  },
+
   setup() {
     const challengeStore = useChallengesStore();
     const partnersStore = usePartnersStore();

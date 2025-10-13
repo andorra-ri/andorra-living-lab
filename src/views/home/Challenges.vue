@@ -51,7 +51,9 @@ export default {
     const formatDate = date => new Intl.DateTimeFormat('ca', format).format(new Date(date));
 
     const challenges = computed(() =>
-      challengesStore.challenges.map(challenge => {
+      challengesStore.challenges
+      .filter(challenge => challenge.active == true)
+      .map(challenge => {
         const dateStart = firebaseTimestampToDate(challenge.date_start);
         const dateEnd = firebaseTimestampToDate(challenge.date_end) || null;
         const passed = dateStart.getTime() < Date.now();

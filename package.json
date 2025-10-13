@@ -12,6 +12,8 @@
     "@firebase/firestore": "^4.9.1",
     "@firebase/storage": "^0.14.0",
     "pinia": "^3.0.3",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.4.1",
     "remarkable": "^2.0.1",
     "reset-css": "^5.0.1",
     "vue": "^3.0.5",
