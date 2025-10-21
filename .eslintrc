@@ -2,7 +2,8 @@
   "root": true,
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "node": true
   },
   "extends": [
     "airbnb-base",
@@ -36,14 +37,17 @@
       }
     }],
     "vue/singleline-html-element-content-newline": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
     "import/no-absolute-path": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": ["error", { "ignore": ["^/@/"] }],
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   },
   "settings": {
     "import/resolver": {
-      "alias": {
-        "map": [["/@", "./src"]],
-        "extensions": [".js", ".json", ".vue", ".yaml"]
+      "node": {
+        "extensions": [".js", ".json", ".vue", ".yaml", ".yml"]
       }
     }
   }
