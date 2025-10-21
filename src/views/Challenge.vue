@@ -5,9 +5,12 @@
         v-if="challenge.cover && challenge.cover[1]"
         :src="challenge.cover[1]"
         class="cover shaded"
-        draggable="false"
-      />
-      <img v-else :src="challenge.cover[0]" class="cover shaded" draggable="false">
+        draggable="false">
+      <img
+        v-else
+        :src="challenge.cover[0]"
+        class="cover shaded"
+        draggable="false">
     </header>
     <section class="section">
       <div class="container">
@@ -21,10 +24,14 @@
             <h3>{{ t('challenges.know_more') }}</h3>
             <p>{{ t('challenges.contact') }}</p>
             <p><a href="#contact">{{ t('challenges.contact_us') }} &rarr;</a></p>
-          
-            <div v-if="challenge.partners" >
+
+            <div v-if="challenge.partners">
               <h3>{{ t('challenges.collaborators') }}</h3>
-              <img v-for="(image, index) in challenge.partners" :key="index" :src="image" class="partner-logo">
+              <img
+                v-for="(image, index) in challenge.partners"
+                :key="index"
+                :src="image"
+                class="partner-logo">
             </div>
           </div>
         </aside>
@@ -32,7 +39,7 @@
           <h1>{{ challenge.name }}</h1>
           <!-- eslint-disable-next-line vue/no-v-html -->
           <div class="md" v-html="challenge.description" />
-               
+
           <div v-if="challenge.bases">
             <a :href="challenge.bases" target="_blank" class="button block">
               {{ t('challenges.bases_download') }}
@@ -49,7 +56,7 @@ import { computed, onBeforeMount } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 import { Remarkable } from 'remarkable';
-import { useChallengesStore } from '/@/stores/challengesStore'
+import { useChallengesStore } from '/@/stores/challengesStore';
 
 export default {
   name: 'Challenge',
@@ -70,23 +77,23 @@ export default {
       const raw = challengesStore.challenge;
 
       if (!raw) return null;
-      
+
       const {
         [`name_${locale.value}`]: name,
         [`description_${locale.value}`]: description,
         ...rest
       } = raw;
 
-      return { ...rest, name, description: md.render(description) }
+      return { ...rest, name, description: md.render(description) };
     });
 
     onBeforeMount(async () => {
       await challengesStore.getChallenge(params.slug);
 
       if (!challengesStore.challenge) {
-        router.push('/#challenges');
+        push('/#challenges');
       }
-    })
+    });
 
     return { t, locale, challenge };
   },

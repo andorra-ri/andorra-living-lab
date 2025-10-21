@@ -34,7 +34,7 @@
 <script>
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useTestimonialsStore } from '/@/stores/testimonialsStore'
+import { useTestimonialsStore } from '/@/stores/testimonialsStore';
 import Paginated from '/@/components/Paginated.vue';
 import config from '/@/config.yaml';
 

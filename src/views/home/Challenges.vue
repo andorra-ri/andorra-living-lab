@@ -31,8 +31,8 @@
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import Paginated from '/@/components/Paginated.vue';
-import { useChallengesStore } from '/@/stores/challengesStore'
-import { firebaseTimestampToDate } from '/@/helpers'
+import { useChallengesStore } from '/@/stores/challengesStore';
+import { firebaseTimestampToDate } from '/@/helpers';
 
 const format = {
   year: 'numeric',
@@ -50,9 +50,8 @@ export default {
 
     const formatDate = date => new Intl.DateTimeFormat('ca', format).format(new Date(date));
 
-    const challenges = computed(() =>
-      challengesStore.challenges
-      .filter(challenge => challenge.active == true)
+    const challenges = computed(() => challengesStore.challenges
+      .filter(challenge => challenge.active === true)
       .map(challenge => {
         const dateStart = firebaseTimestampToDate(challenge.date_start);
         const dateEnd = firebaseTimestampToDate(challenge.date_end) || null;
@@ -63,8 +62,7 @@ export default {
             ? formatDate(dateStart)
             : `${formatDate(dateStart)} - ${formatDate(dateEnd)}`;
         return { ...challenge, dateString, passed };
-      })
-    );
+      }));
 
     return { t, locale, challenges };
   },

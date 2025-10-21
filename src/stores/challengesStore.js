@@ -1,96 +1,93 @@
-import { defineStore } from "pinia";
-import { db } from '/@/firebase'
-import { collection, query, where, limit, orderBy, getDocs } from "@firebase/firestore";
-import { localizeFields, replaceGsUrlsWithPublicUrlsAsync } from '/@/helpers'
+import { defineStore } from 'pinia';
+import { db } from '/@/firebase';
+import { collection, query, where, limit, orderBy, getDocs } from '@firebase/firestore';
+import { localizeFields, replaceGsUrlsWithPublicUrlsAsync } from '/@/helpers';
 
 export const useChallengesStore = defineStore('challenges', {
-    state: () => ({
-        challenges: [],
-        challenge: null,
-        loading: false,
-    }),
+  state: () => ({
+    challenges: [],
+    challenge: null,
+    loading: false,
+  }),
 
-    actions: {
-        async getAllChallenges() {
-            this.loading = true;
+  actions: {
+    async getAllChallenges() {
+      this.loading = true;
 
-            try {
-                const q = query(
-                    collection(db, "challenges"),
-                    //where("active", "==", true),
-                    orderBy("date_start", "desc"),
-                    //orderBy("order", "desc"),
-                );
-                const snapshot = await getDocs(q);
+      try {
+        const q = query(
+          collection(db, 'challenges'),
+          // where("active", "==", true),
+          orderBy('date_start', 'desc'),
+          // orderBy("order", "desc"),
+        );
+        const snapshot = await getDocs(q);
 
-                const localizedFields = ['name'];
-                const gsFields = ['cover', 'partners', 'bases'];
+        const localizedFields = ['name'];
+        const gsFields = ['cover', 'partners', 'bases'];
 
-                const results = [];
+        const results = await Promise.all(
+          snapshot.docs.map(async doc => {
+            const raw = doc.data();
+            const localizedData = localizeFields(raw, localizedFields);
+            const resolvedMedia = await replaceGsUrlsWithPublicUrlsAsync(localizedData, gsFields);
 
-                for (const doc of snapshot.docs) {
-                     const raw = doc.data();
+            return {
+              id: doc.id,
+              ...resolvedMedia,
+            };
+          }),
+        );
 
-                     const localizedData = localizeFields(raw, localizedFields);
+        this.challenges = results;
+      } catch (err) {
+        console.error('Failed to fetch challenges:', err);
+      } finally {
+        this.loading = false;
+      }
+    },
 
-                     const resolvedMedia = await replaceGsUrlsWithPublicUrlsAsync(localizedData, gsFields);
+    async getChallenge(slug) {
+      this.loading = true;
+      this.challenge = null;
 
-                     results.push({
-                        id: doc.id,
-                        ...resolvedMedia
-                    });
-                }
+      try {
+        const q = query(
+          collection(db, 'challenges'),
+          where('slug', '==', slug),
+          where('active', '==', true),
+          limit(1),
+        );
 
-                this.challenges = results;
-            } catch (err) {
-                console.error("Failed to fetch challenges:", err);
-            } finally {
-                this.loading = false;
-            }
-        },
+        const snapshot = await getDocs(q);
 
-        async getChallenge(slug) {
-            this.loading = true;
-            this.challenge = null;
+        if (snapshot.empty) {
+          console.warn(`Challenge with slug "${slug}" not found.`);
+          return null;
+        }
 
-            try {
-                const q = query(
-                    collection(db, "challenges"),
-                    where("slug", "==", slug),
-                    where("active", "==", true),
-                    limit(1)
-                );
+        const doc = snapshot.docs[0];
+        const raw = doc.data();
 
-                const snapshot = await getDocs(q);
+        const localizedFields = ['name', 'description'];
+        const gsFields = ['cover', 'partners', 'bases'];
+        const localizedData = localizeFields(raw, localizedFields);
+        const resolvedMedia = await replaceGsUrlsWithPublicUrlsAsync(localizedData, gsFields);
 
-                if (snapshot.empty) {
-                    console.warn(`Challenge with slug "${slug}" not found.`);
-                    return null;
-                }
+        const challenge = {
+          id: doc.id,
+          ...resolvedMedia,
+        };
 
-                const doc = snapshot.docs[0];
-                const raw = doc.data();
+        this.challenge = challenge;
 
-                const localizedFields = ['name', 'description'];
-                const gsFields = ['cover', 'partners', 'bases'];
-                const localizedData = localizeFields(raw, localizedFields);
-                const resolvedMedia = await replaceGsUrlsWithPublicUrlsAsync(localizedData, gsFields);
-
-                const challenge = {
-                    id: doc.id,
-                    ...resolvedMedia
-                };
-
-                this.challenge = challenge;
-
-                return challenge;
-
-            } catch (err) {
-                console.error("Failed to fetch challenge:", err);
-                return null;
-            } finally {
-                this.loading = false;
-            }
-        },
-    }
-})
+        return challenge;
+      } catch (err) {
+        console.error('Failed to fetch challenge:', err);
+        return null;
+      } finally {
+        this.loading = false;
+      }
+    },
+  },
+});

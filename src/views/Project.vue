@@ -64,7 +64,7 @@ export default {
       const raw = projectsStore.project;
 
       if (!raw) return null;
-      
+
       const {
         [`name_${locale.value}`]: name,
         [`description_${locale.value}`]: description,
@@ -72,22 +72,22 @@ export default {
         ...rest
       } = raw;
 
-      const filteredDocs = docs.filter((e) => e);
+      const filteredDocs = docs.filter(e => e);
       const documents = filteredDocs.map(doc => ({ ...doc, icon: fileIcon(doc.type) }));
 
-      return { ...rest, name, documents, description: md.render(description) }
+      return { ...rest, name, documents, description: md.render(description) };
     });
 
     onBeforeMount(async () => {
       await projectsStore.getProject(params.slug);
 
       if (!projectsStore.project) {
-        router.push('/#case-studies');
+        push('/#case-studies');
       }
-    })
+    });
 
     return { t, locale, project };
-  }
+  },
 };
 </script>
 

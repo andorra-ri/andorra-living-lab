@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { mapState } from 'pinia';
+import { computed } from 'vue';
 import { usePartnersStore } from '/@/stores/partnersStore';
 
 export default {
@@ -25,6 +25,6 @@ export default {
     const partners = computed(() => partnersStore.partners);
 
     return { partners };
-  }
+  },
 };
 </script>

@@ -1,23 +1,21 @@
 <template>
-  <div class="dropdown" ref="dropdownRef">
+  <div ref="dropdownRef" class="dropdown">
     <div class="dropdown-header border" @click="toggleDropdown">
       <span class="label">{{ label }}</span>
       <span class="arrow" :class="{ open: isOpen }">▼</span>
     </div>
-    
+
     <div v-if="isOpen" class="dropdown-options">
       <div
         v-for="option in options"
         :key="option.value"
         class="option"
         :class="{ selected: isSelected(option.value) }"
-        @click="toggleOption(option.value)"
-      >
+        @click="toggleOption(option.value)">
         <input
           type="checkbox"
           :checked="isSelected(option.value)"
-          @click.stop
-        />
+          @click.stop>
         <span>{{ option.label }}</span>
       </div>
     </div>
@@ -30,25 +28,21 @@ export default {
   props: {
     label: {
       type: String,
-      required: true
+      required: true,
     },
     options: {
       type: Array,
       required: true,
-      validator: (opts) => {
-        return opts.every(opt => opt.label && opt.value !== undefined);
-      }
+      validator: opts => opts.every(opt => opt.label && opt.value !== undefined),
     },
     modelValue: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
   emits: ['update:modelValue'],
   data() {
-    return {
-      isOpen: false
-    };
+    return { isOpen: false };
   },
   mounted() {
     document.addEventListener('click', this.handleClickOutside);
@@ -63,13 +57,13 @@ export default {
     toggleOption(value) {
       const selected = [...this.modelValue];
       const idx = selected.indexOf(value);
-      
+
       if (idx > -1) {
         selected.splice(idx, 1);
       } else {
         selected.push(value);
       }
-      
+
       this.$emit('update:modelValue', selected);
     },
     isSelected(value) {
@@ -79,7 +73,7 @@ export default {
       if (this.$refs.dropdownRef && !this.$refs.dropdownRef.contains(e.target)) {
         this.isOpen = false;
       }
-    }
-  }
+    },
+  },
 };
 </script>

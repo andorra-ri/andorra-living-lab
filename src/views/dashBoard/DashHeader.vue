@@ -1,17 +1,17 @@
 <template>
-    <header class="myheader primary split-layout" >
-      <div class="left-side">
-        <h1>DashBoard</h1>
-      </div>
-      <div class="right-side">
-        <p>Nom Usuari</p>
-      </div>
-    </header>
-</template> 
+  <header class="myheader primary split-layout">
+    <div class="left-side">
+      <h1>DashBoard</h1>
+    </div>
+    <div class="right-side">
+      <p>Nom Usuari</p>
+    </div>
+  </header>
+</template>
 
 <style lang="scss" scoped>
 
-header { 
+header {
     height: 7rem;
     position: fixed;
     width: 100%;
@@ -20,8 +20,8 @@ header {
 
 h1{
   position: absolute;
-  bottom: 0;     
-  left: 0;      
+  bottom: 0;
+  left: 0;
   font-family: var(--header-font);
   font-weight: 300;
   color: var(--header-color);

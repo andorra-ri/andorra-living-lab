@@ -1,10 +1,8 @@
 <template>
-  <button 
-    class="toggle-button border" 
+  <button
+    class="toggle-button border"
     :class="{ active: modelValue, inactive: !modelValue }"
-    @click="toggle"
-    >  
-  </button>
+    @click="toggle" />
 </template>
 
 <script>
@@ -13,21 +11,21 @@ export default {
   props: {
     modelValue: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   emits: ['update:modelValue'],
   methods: {
     toggle() {
       this.$emit('update:modelValue', !this.modelValue);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
 .toggle-button {
-  height: 1.5rem;  
+  height: 1.5rem;
   width: 3rem;
   cursor: pointer;
   margin: 0;

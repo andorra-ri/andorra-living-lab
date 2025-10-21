@@ -4,13 +4,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint src && stylelint src/styles/**/*.scss",
+    "lint": "eslint src --ext .js,.vue && stylelint src/styles/**/*.scss",
+    "lint:fix": "eslint --fix src --ext .js,.vue && stylelint --fix src/styles/**/*.scss",
     "serve": "vite preview"
   },
   "dependencies": {
     "@firebase/app": "^0.14.2",
     "@firebase/firestore": "^4.9.1",
     "@firebase/storage": "^0.14.0",
+    "@primevue/core": "^4.4.1",
     "pinia": "^3.0.3",
     "primeicons": "^7.0.0",
     "primevue": "^4.4.1",
