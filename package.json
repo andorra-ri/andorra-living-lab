@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint src && stylelint src/styles/**/*.scss",
-    "lint:fix": "eslint --fix src && stylelint --fix src/styles/**/*.scss",
+    "lint": "eslint src --ext .js,.vue && stylelint src/styles/**/*.scss",
+    "lint:fix": "eslint --fix src --ext .js,.vue && stylelint --fix src/styles/**/*.scss",
     "serve": "vite preview"
   },
   "dependencies": {
