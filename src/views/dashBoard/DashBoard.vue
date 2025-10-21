@@ -1,19 +1,19 @@
 <template>
-    <section class="body">
-        <div class="container split-layout">
-            <div class="left-side">
+    <section class="dash-body">
+        <div class="container dash-container split-layout">
+
                 <DataTable 
                     v-if="challenges.length"
                     :value="challenges"
                     class="p-datatable-sm"
                 >
-                    <Column field="name" class="md" :header="t('Name')">
+                    <Column field="name" class="md" header="Challenge">
                     <template #body="slotProps">
                         {{ slotProps.data[`name_${locale}`] }}
                     </template>
                     </Column>
 
-                    <Column field="active" :header="t('Active')">
+                    <Column field="active" header="Actiu">
                     <template #body="slotProps">
                         <div class="square-container">
                             <div 
@@ -24,65 +24,38 @@
                     </template>
                     </Column>
 
-                    <Column field="area" :header="t('Area')">
+                    <Column field="area" header="Area">
                     <template #body="slotProps">
                         {{ cleanArea(slotProps.data.area) }}
                     </template>
                     </Column>
 
-                    <Column header="PDF">
-                        <template #body="slotProps">
-                            <div v-if="slotProps.data.bases" class="square-container">
-                                <Button 
-                                    @click="showPdf (slotProps.data.bases)"
-                                    icon="pi pi-eye"
-                                    class="square-btn"
-                                />
-                            </div>
-                        </template>
-                    </Column>
-
-                    <Column header="Edit">
+                    <Column header="Editar">
                         <template #body="slotProps">
                             <div class="square-container">
-                                <Button
-                                    icon="pi pi-pencil"
-                                    class="square-btn"
-                                    @click="$router.push(`/dashboard/challengeEdit/${slotProps.data.slug}`)"
-                                />
+                                <router-link class="square-btn" :to="`/dashboard/challengeEdit/${slotProps.data.slug}`">
+                                    <Button
+                                        icon="pi pi-pencil"
+                                        class="square-btn"
+                                    />
+                                </router-link>
                             </div>
                         </template>
                     </Column>
                 </DataTable>
-            </div>
-            <div class = "right-side">
-                <div class="pdf-preview" :class="{ 'has-pdf': currentPdf }">
-                    <div v-if="!currentPdf" class="empty-preview">
-                        <p>No s'ha seleccionat cap Preview</p>
-                    </div>
-                    <div v-if="currentPdf" class="pdf-container">
-                        <iframe 
-                            v-if="currentPdf"
-                            :src="currentPdf" 
-                            class="pdf-iframe"
-                            frameborder="0"
-                        ></iframe>
-                    </div>
-                    
-                </div>
-            </div>        
-        </div>
+            </div>    
     </section>
 </template>
 
 <script>
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useChallengesStore } from '/@/stores/challengesStore'
 import { firebaseTimestampToDate } from '/@/helpers'
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import { Button } from 'primevue';
+import ChallengeEdit from './ChallengeEdit.vue';
 
 
 const format = {
@@ -97,13 +70,13 @@ export default {
     components: {
         DataTable,
         Column, 
-        Button
+        Button,
+        ChallengeEdit,
     },
 
   setup() {
     const { t, locale } = useI18n();
     const challengesStore = useChallengesStore();
-    const currentPdf = ref(null);
     const formatDate = date => new Intl.DateTimeFormat('ca', format).format(new Date(date));
 
     const challenges = computed(() =>
@@ -122,32 +95,16 @@ export default {
 
     const cleanArea = (area) => {
         if (!area) return '';
-        // Convierte array a string y remueve símbolos
         return String(area)
             .replace(/[\[\]"]/g, '')
     };
 
-    const showPdf = (pdf_url) => {
-        currentPdf.value = pdf_url;
-    };
-
-    return { t, locale, challenges, cleanArea, currentPdf, showPdf };
+    return { t, locale, challenges, cleanArea, ChallengeEdit};
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.body {
-  padding: 3.5rem 0;
-}
-
-.container {
-  position: relative;
-  max-width: 1324px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  z-index: 1;
-}
 
 .square-container {
     display: flex;
@@ -170,40 +127,14 @@ export default {
   background-color: #ef4444; 
 }
 
-.split-layout {
-    display: flex;
-    gap: 3rem;
-    align-items: flex-start;
-}
-
 .left-side {
-    flex: 1;
+    width: 70%;
 }
 
 .right-side {
-    width: 300px;
+    width: 30%;
 }
 
-.pdf-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.pdf-iframe {
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-    border: none;
-}
-
-.empty-preview {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 400px;
-    color: #666;
-}
 
 ::v-deep(.p-datatable .p-datatable-tbody > tr > td) {
     vertical-align: middle;

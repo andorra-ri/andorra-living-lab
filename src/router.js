@@ -29,7 +29,7 @@ export default createRouter({
     },
     {
       path: '/dashboard/challengeEdit/:slug(.*)?',
-      name: 'challendEdit',
+      name: 'challengeEdit',
       component: () => import('./views/dashBoard/ChallengeEdit.vue'),
       meta: {
         isDashBoard: true,

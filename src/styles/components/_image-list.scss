@@ -1,0 +1,56 @@
+.image-list {
+    width: auto;
+    height: auto;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 7rem);
+  max-width: calc(3 * (7rem + 1rem));
+  gap: 1rem;
+}
+
+.image-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.image-item  {
+  height: auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0; 
+}
+
+.image-actions {
+    display: flex;
+    padding: 12px;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.btn-list {
+  flex: 1;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0px;
+}
