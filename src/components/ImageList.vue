@@ -5,32 +5,28 @@
     </div>
 
     <div v-else class="image-grid ">
-      <div 
-        v-for="(image, index) in images" 
+      <div
+        v-for="(image, index) in images"
         :key="index"
-        class="image-item border"
-      >
-        <img :src="image.url || image" :alt="image.name" />
-        
+        class="image-item border">
+        <img :src="image.url || image" :alt="image.name">
+
         <div class="image-actions">
-          <Button 
-            @click="$emit('edit', image, index)" 
+          <Button
             icon="pi pi-pencil"
             class="btn-list  border"
-          />
-          
-          <Button 
-            @click="$emit('delete', image, index)" 
+            @click="$emit('edit', image, index)" />
+
+          <Button
             class="btn-list border"
             icon="pi pi-trash"
-          />
+            @click="$emit('delete', image, index)" />
         </div>
       </div>
       <div class="image-item">
-          <Button
-            class="btn-list border"
-            icon="pi pi-plus"
-          />
+        <Button
+          class="btn-list border"
+          icon="pi pi-plus" />
       </div>
     </div>
   </div>
@@ -40,18 +36,15 @@
 import { Button } from 'primevue';
 
 export default {
-    name: 'ImageList',
-    components: {
-        Button
+  name: 'ImageList',
+  components: { Button },
+  props: {
+    images: {
+      type: Array,
+      default: () => [],
     },
-    props: {
-        images: {
-            type: Array,
-            default: () => []
-        }
-    },
-    emits: ['edit', 'delete']
+  },
+  emits: ['edit', 'delete'],
 
 };
 </script>
-

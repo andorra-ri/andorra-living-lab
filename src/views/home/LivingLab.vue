@@ -82,13 +82,11 @@ export default {
 
     const partnersStore = usePartnersStore();
 
-    const partners = computed(() =>
-      partnersStore.partners.map(partner => ({
-        name: partner.name,
-        url: partner.web,
-        image: partner.logo ?? '',
-      }))
-    );
+    const partners = computed(() => partnersStore.partners.map(partner => ({
+      name: partner.name,
+      url: partner.web,
+      image: partner.logo ?? '',
+    })));
 
     return { t, locale, ...livinglab, partners };
   },

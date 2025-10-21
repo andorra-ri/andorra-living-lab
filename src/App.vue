@@ -1,6 +1,6 @@
 <template>
   <navigation v-if="!isDashBoard" />
-  <dash-header v-else/>
+  <dash-header v-else />
   <router-view />
   <page-footer v-if="!isDashBoard" />
 </template>
@@ -9,22 +9,15 @@
 import { onBeforeMount } from 'vue';
 import { useChallengesStore } from '/@/stores/challengesStore';
 import { usePartnersStore } from '/@/stores/partnersStore';
-import { useTestimonialsStore } from '/@/stores/testimonialsStore'
-import { useProjectsStore } from '/@/stores/projectsStore'
+import { useTestimonialsStore } from '/@/stores/testimonialsStore';
+import { useProjectsStore } from '/@/stores/projectsStore';
 import Navigation from '/@/views/Navigation.vue';
 import PageFooter from '/@/views/PageFooter.vue';
 import DashHeader from '/@/views/dashBoard/DashHeader.vue';
 
-
 export default {
   name: 'App',
   components: { Navigation, PageFooter, DashHeader },
-
-  computed: {
-    isDashBoard() {
-      return this.$route.meta?.isDashBoard || false
-    },
-  },
 
   setup() {
     const challengeStore = useChallengesStore();
@@ -37,9 +30,15 @@ export default {
         challengeStore.getAllChallenges(),
         partnersStore.getAllPartners(),
         testimonialsStore.getAllTestimonials(),
-        projectsStore.getAllProjects()
-      ])
+        projectsStore.getAllProjects(),
+      ]);
     });
-  }
+  },
+
+  computed: {
+    isDashBoard() {
+      return this.$route.meta?.isDashBoard || false;
+    },
+  },
 };
 </script>

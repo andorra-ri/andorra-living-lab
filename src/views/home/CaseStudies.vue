@@ -50,9 +50,7 @@ export default {
 
     const projectsStore = useProjectsStore();
 
-    const projects = computed(() => {
-      return projectsStore.projects
-    });
+    const projects = computed(() => projectsStore.projects);
 
     return { t, locale, projects };
   },
