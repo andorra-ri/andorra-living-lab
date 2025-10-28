@@ -11,13 +11,18 @@
     "@firebase/app": "^0.14.2",
     "@firebase/firestore": "^4.9.1",
     "@firebase/storage": "^0.14.0",
+    "@primevue/forms": "^4.4.1",
+    "@primevue/themes": "^4.4.1",
     "pinia": "^3.0.3",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.4.1",
     "remarkable": "^2.0.1",
     "reset-css": "^5.0.1",
-    "vue": "^3.0.5",
-    "vue-i18n": "^9.1.9",
-    "vue-router": "^4.0.12",
-    "vue-svg-inline-plugin": "^2.2.0"
+    "vue": "^3.5.22",
+    "vue-i18n": "^9.14.5",
+    "vue-router": "^4.6.3",
+    "vue-svg-inline-plugin": "^2.2.0",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@intlify/vite-plugin-vue-i18n": "^3.2.1",

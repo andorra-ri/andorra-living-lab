@@ -19,6 +19,12 @@ export default createRouter({
       name: 'challenge',
       component: () => import('./views/Challenge.vue'),
     },
+    {
+      path: '/dashboard/',
+      name: 'dashboard',
+      component: () => import('./views/dashboard/Dashboard.vue')
+      // meta: { isDashBoard: true },
+    },
   ],
   scrollBehavior(to) {
     return to.hash ? {

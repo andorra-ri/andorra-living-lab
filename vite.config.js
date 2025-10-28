@@ -19,4 +19,11 @@ export default defineConfig({
       { find: '/@', replacement: path.resolve(__dirname, './src') },
     ],
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler' // or "modern"
+      }
+    }
+  }
 });

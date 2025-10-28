@@ -2,20 +2,24 @@
   <navigation />
   <router-view />
   <page-footer />
+  <GlobalModals />
 </template>
 
 <script>
 import { onBeforeMount } from 'vue';
 import { useChallengesStore } from '/@/stores/challengesStore';
 import { usePartnersStore } from '/@/stores/partnersStore';
-import { useTestimonialsStore } from '/@/stores/testimonialsStore'
-import { useProjectsStore } from '/@/stores/projectsStore'
+import { useTestimonialsStore } from '/@/stores/testimonialsStore';
+import { useProjectsStore } from '/@/stores/projectsStore';
+
+
 import Navigation from '/@/views/Navigation.vue';
 import PageFooter from '/@/views/PageFooter.vue';
+import GlobalModals from './views/modals/GlobalModals.vue';
 
 export default {
   name: 'App',
-  components: { Navigation, PageFooter },
+  components: { Navigation, PageFooter, GlobalModals },
   setup() {
     const challengeStore = useChallengesStore();
     const partnersStore = usePartnersStore();
@@ -30,6 +34,11 @@ export default {
         projectsStore.getAllProjects()
       ])
     });
-  }
+  },
+  computed: {
+    isDashBoard() {
+      return this.$route.meta?.isDashBoard || false;
+    },
+  },
 };
 </script>
